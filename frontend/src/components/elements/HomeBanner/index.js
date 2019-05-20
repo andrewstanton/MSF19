@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Banner } from "../../styles/elements"
+import { Banner } from "../../utilities/Banner"
 
 const HomeBanner = () => <Banner>Hello</Banner>
 

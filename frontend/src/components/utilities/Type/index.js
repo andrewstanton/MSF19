@@ -1,5 +1,5 @@
 export const Type = {
-  basesize: "14px",
+  basesize: "16px",
   text: `'Roboto', sans-serif`,
   header: `'Roboto Slab', serif`,
 }

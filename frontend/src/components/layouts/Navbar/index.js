@@ -2,8 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import { Wrapper } from "../../styles/elements"
-import { Color, Type } from "../../styles/utilities"
+import { Color, Type, Wrapper } from "../../utilities"
 
 const StyledNavbar = styled.nav`
   background: ${Color.grey};

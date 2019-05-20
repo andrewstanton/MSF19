@@ -3,8 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Navbar from "../Navbar"
-import { Color, Type } from "../../styles/utilities"
-import { Wrapper } from "../../styles/elements"
+import { Color, Type, Wrapper } from "../../utilities"
 
 import logo from "../../../images/logo.png"
 

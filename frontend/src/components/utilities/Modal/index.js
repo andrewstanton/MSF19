@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import Portal from "../Portal"
+import { Portal } from "../Portal"
 
-class Modal extends Component {
+export class Modal extends Component {
   render() {
     const { toggle, on } = this.props
     return on ? (
@@ -22,5 +22,3 @@ class Modal extends Component {
     ) : null
   }
 }
-
-export default Modal

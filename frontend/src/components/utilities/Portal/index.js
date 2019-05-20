@@ -3,7 +3,7 @@ import ReactDOM from "react-dom"
 
 const portalRoot = document.getElementById("portal")
 
-class Portal extends Component {
+export class Portal extends Component {
   constructor() {
     super()
     this.el = document.createElement("div")
@@ -22,5 +22,3 @@ class Portal extends Component {
     return ReactDOM.createPortal(children, this.el)
   }
 }
-
-export default Portal
