@@ -23,8 +23,8 @@ const StyledSection = styled.section`
     color: ${props => props.heading || "inherit"};
   }
 `
-export const Section = ({ children, background, heading }) => (
+export const Section = ({ children, background, heading, wrapperWidth }) => (
   <StyledSection background={background} heading={heading}>
-    <Wrapper>{children}</Wrapper>
+    <Wrapper width={wrapperWidth}>{children}</Wrapper>
   </StyledSection>
 )

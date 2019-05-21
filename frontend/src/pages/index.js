@@ -9,7 +9,7 @@ import {
   Section,
   Flex,
   Col,
-  ButtonOrange,
+  ButtonBorderOrange,
   AlignCenter,
 } from "../components/utilities"
 
@@ -39,13 +39,15 @@ const IndexPage = () => (
         </Col>
       </Flex>
     </Section>
-    <Section background={Color.light_grey}>
+    <Section background={Color.light_grey} wrapperWidth="60%">
       <h2>2019 Parade - Come One, Come All - Circus</h2>
       The parade theme is here, and participants can sign up now. Please follow
       the link below and download a copy of the 2018 Maumee Summer Fair parade
       participate form
       <AlignCenter>
-        <ButtonOrange>Download Parade Participant Form</ButtonOrange>
+        <ButtonBorderOrange marginTop="20px">
+          Download Parade Participant Form
+        </ButtonBorderOrange>
       </AlignCenter>
     </Section>
   </Layout>

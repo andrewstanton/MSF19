@@ -22,7 +22,7 @@ const StyledLink = styled(Link)`
   color: ${Color.white};
   text-decoration: none;
   font-family: ${Type.header};
-  font-size: 1.4em;
+  font-size: 1.25em;
   &:hover {
     background: ${Color.orange};
   }
