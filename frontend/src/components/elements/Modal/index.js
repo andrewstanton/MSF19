@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import { Portal } from "../Portal"
+import { Portal } from "../../utilities"
 
 export class Modal extends Component {
   render() {

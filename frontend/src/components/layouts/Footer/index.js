@@ -40,7 +40,12 @@ const Footer = () => (
           </div>
           <div>Website By Todd Productions Inc.</div>
         </Col>
-        <Col>Page Links Go Here</Col>
+        <Col>
+          <Flex>
+            <Col>Nav Link</Col>
+            <Col>Nav Link</Col>
+          </Flex>
+        </Col>
       </Flex>
     </Wrapper>
   </StyledFooter>

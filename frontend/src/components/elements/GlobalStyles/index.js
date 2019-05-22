@@ -1,18 +1,15 @@
 import { createGlobalStyle } from "styled-components"
+import { normalize } from "polished"
 
 import { Color, Type } from "../../utilities"
 
-const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
+    ${normalize()};
+
     @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:400,700&display=swap');
-    
-    * {
-        box-sizing: border-box;
-    }
 
     body {
         background-color: ${Color.grey};
-        padding: 0;
-        margin: 0;
         font-family: ${Type.text};
         font-size: ${Type.basesize};
         color: ${Color.grey};
@@ -43,5 +40,3 @@ const GlobalStyles = createGlobalStyle`
         font-size: 1.5rem;
     }
 `
-
-export default GlobalStyles

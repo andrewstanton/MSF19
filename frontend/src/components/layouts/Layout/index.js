@@ -6,7 +6,7 @@ import styled from "styled-components"
 import Header from "../Header"
 import Footer from "../Footer"
 
-import GlobalStyles from "../../elements/GlobalStyles"
+import { GlobalStyles } from "../../elements"
 import { Color } from "../../utilities"
 
 const Body = styled.div`

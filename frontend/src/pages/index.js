@@ -2,21 +2,14 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layouts/Layout"
-import HomeBanner from "../components/elements/HomeBanner"
 
-import {
-  Color,
-  Section,
-  Flex,
-  Col,
-  ButtonBorderOrange,
-  AlignCenter,
-} from "../components/utilities"
+import { HomeBanner, Section, Button } from "../components/elements"
+import { Flex, Col, AlignCenter } from "../components/utilities"
 
 const IndexPage = () => (
   <Layout>
     <HomeBanner />
-    <Section background={Color.white} heading={Color.orange}>
+    <Section>
       <Flex>
         <Col>
           <h2>2018 Summer Fair Commerical</h2>
@@ -39,15 +32,15 @@ const IndexPage = () => (
         </Col>
       </Flex>
     </Section>
-    <Section background={Color.light_grey} wrapperWidth="60%">
+    <Section modifiers="light">
       <h2>2019 Parade - Come One, Come All - Circus</h2>
       The parade theme is here, and participants can sign up now. Please follow
       the link below and download a copy of the 2018 Maumee Summer Fair parade
       participate form
       <AlignCenter>
-        <ButtonBorderOrange marginTop="20px">
+        <Button modifiers="borderBlue" marginTop="20px">
           Download Parade Participant Form
-        </ButtonBorderOrange>
+        </Button>
       </AlignCenter>
     </Section>
   </Layout>
