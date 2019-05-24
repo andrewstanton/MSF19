@@ -1,6 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { darken } from "polished"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons"
+
+import * as moment from "moment"
 
 import Navbar from "../Navbar"
 import { Color, Type, Wrapper } from "../../utilities"
@@ -34,31 +39,60 @@ const HeaderRight = styled.div`
     font-family: ${Type.header};
     font-size: 1.2rem;
   }
+
+  .social {
+    padding-top: 0.25rem;
+    &-fb {
+      font-size: 1.5rem;
+    }
+
+    a {
+      color: ${Color.white};
+      &:hover {
+        color: ${darken("0.3", Color.blue)};
+      }
+    }
+  }
 `
 
-const Header = () => (
-  <>
-    <StyledHeader>
-      <StyledWrapper>
-        <Link to="/">
-          <img src={logo} className="logo" />
-        </Link>
-        <HeaderRight>
-          <div>
-            <span className="bold-date">August XX</span> 5pm - 12am
-            <br />
-            <span className="bold-date">August XX</span> 5pm - 12am
-          </div>
-          <div>
-            Follow Us:
-            <br />
-            Facebook Link
-          </div>
-        </HeaderRight>
-      </StyledWrapper>
-    </StyledHeader>
-    <Navbar />
-  </>
-)
+const Header = ({ siteMetadata = {} }) => {
+  const { dates, title, nav, social } = siteMetadata
+  const { start, end } = dates
+
+  const startDate = moment(start.date, "MM/DD/YYYY").format("MMMM Do"),
+    endDate = moment(end.date, "MM/DD/YYYY").format("MMMM Do")
+
+  return (
+    <>
+      <StyledHeader>
+        <StyledWrapper>
+          <Link to="/">
+            <img src={logo} className="logo" alt={title} />
+          </Link>
+          <HeaderRight>
+            <div>
+              <span className="bold-date">{startDate}</span> {start.time}
+              <br />
+              <span className="bold-date">{endDate}</span> {end.time}
+            </div>
+            <div>
+              Follow Us:
+              <br />
+              <div className="social">
+                <a href={social.facebook}>
+                  <FontAwesomeIcon
+                    icon={faFacebookSquare}
+                    className="social-fb"
+                  />
+                </a>
+              </div>
+            </div>
+          </HeaderRight>
+        </StyledWrapper>
+      </StyledHeader>
+      <Navbar nav={nav} />
+    </>
+  )
+}
 
 export default Header

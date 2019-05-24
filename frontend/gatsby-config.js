@@ -1,8 +1,42 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Maumee Summer Fair`,
+    description: `The Annual Maumee Summer Fair Is Held Each August On Beautifully Tree-lined Streets In The Historic Uptown District Of Maumee, Ohio`,
+    dates: {
+      start: {
+        date: "08/09/2019",
+        time: "5pm - 12am",
+      },
+      end: {
+        date: "08/10/2019",
+        time: "5pm - 12am",
+      },
+    },
+    nav: [
+      {
+        label: "Fair Guide",
+        url: "fair-guide",
+      },
+      {
+        label: "Food",
+        url: "food",
+      },
+      {
+        label: "Music",
+        url: "music",
+      },
+      {
+        label: "Activities",
+        url: "activities",
+      },
+      {
+        label: "Information / Registration",
+        url: "information-registration",
+      },
+    ],
+    social: {
+      facebook: "https://www.facebook.com/maumeesummerfair/",
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,13 +61,13 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages/markdown`,
-        name: "pages",
+        name: `json`,
+        path: `${__dirname}/src/json/`,
       },
     },
-    `gatsby-transformer-remark`,
   ],
 }

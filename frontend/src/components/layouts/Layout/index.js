@@ -31,6 +31,31 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            dates {
+              start {
+                date
+                time
+              }
+              end {
+                date
+                time
+              }
+            }
+            social {
+              facebook
+            }
+            nav {
+              label
+              url
+            }
+          }
+        }
+        allSponsorsJson {
+          edges {
+            node {
+              name
+              img
+            }
           }
         }
       }
@@ -38,9 +63,12 @@ const Layout = ({ children }) => (
     render={data => (
       <div>
         <GlobalStyles />
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteMetadata={data.site.siteMetadata} />
         <Body>{children}</Body>
-        <Footer />
+        <Footer
+          siteMetadata={data.site.siteMetadata}
+          sponsors={data.allSponsorsJson}
+        />
       </div>
     )}
   />
