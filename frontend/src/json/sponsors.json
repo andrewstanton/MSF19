@@ -1,90 +1,134 @@
 [
   {
     "name": "Treu House Of Munch",
-    "img": "treu.jpg"
+    "img": "treu.jpg",
+    "background": "black",
+    "url": "http://google.com"
   },
   {
     "name": "St. Lukes Hospital",
-    "img": "stlukes.jpg"
+    "img": "stlukes.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "KeyBank",
-    "img": "keybank.jpg"
+    "img": "keybank.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "The Andersons",
-    "img": "andersons.jpg"
+    "img": "andersons.jpg",
+    "background": "black",
+    "url": "http://google.com"
   },
   {
     "name": "PODS",
-    "img": "pods.jpg"
+    "img": "pods.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "Savage McVicker",
-    "img": "savage.jpg"
+    "img": "savage.jpg",
+    "background": "#16315b",
+    "url": "http://google.com"
   },
   {
     "name": "IGS",
-    "img": "igs.jpg"
+    "img": "igs.jpg",
+    "background": "#006496",
+    "url": "http://google.com"
   },
   {
     "name": "Meijer",
-    "img": "meijer.jpg"
+    "img": "meijer.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "Elizabeth Scott Community",
-    "img": "es-1.jpg"
+    "img": "es-1.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "AT&T",
-    "img": "atnt.jpg"
+    "img": "atnt.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "Dales Bar and Grill",
-    "img": "dales.jpg"
+    "img": "dales.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "The Village Idiot",
-    "img": "vi.jpg"
+    "img": "vi.jpg",
+    "background": "#615e53",
+    "url": "http://google.com"
   },
   {
     "name": "Buckeye Broadband",
-    "img": "buck.jpg"
+    "img": "buck.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "Brondes",
-    "img": "brondes.jpg"
+    "img": "brondes.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "Resolute Bank",
-    "img": "resolution.jpg"
+    "img": "resolution.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "Western & Southern Life",
-    "img": "westernAndSouthern-1-1.jpg"
+    "img": "westernAndSouthern-1-1.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "Dibling Floor Covering",
-    "img": "dibling.jpg"
+    "img": "dibling.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "Todd Productions Inc.",
-    "img": "toddprod.jpg"
+    "img": "toddprod.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "Spoiled",
-    "img": "spoiled.png"
+    "img": "spoiled.png",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "DECA",
-    "img": "deca.jpg"
+    "img": "deca.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "The Blade",
-    "img": "blade.jpg"
+    "img": "blade.jpg",
+    "background": "white",
+    "url": "http://google.com"
   },
   {
     "name": "The Mirror Newspapers",
-    "img": "mirror.jpg"
+    "img": "mirror.jpg",
+    "background": "white",
+    "url": "http://google.com"
   }
 ]

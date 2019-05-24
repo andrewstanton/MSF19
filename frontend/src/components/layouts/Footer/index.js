@@ -50,10 +50,35 @@ const SecondaryHeading = styled(StyledHeading)`
 
 const SponsorGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
 `
 
-const Footer = ({ siteMetadata, sponsors = {} }) => {
+const SponsorItem = styled.a`
+  background-image: ${({ img }) => `url('${img}')` || ""};
+  background-color: ${({ background }) => background || "transparent"};
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  max-width: 150px;
+  margin: auto;
+  transition: all 0.3s ease;
+  border-radius: 100%;
+
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.5) rotate(360deg);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+`
+
+const Footer = ({ siteMetadata = {}, sponsors = {}, images = {} }) => {
   const { nav } = siteMetadata
   const year = moment().format("YYYY")
   return (
@@ -87,11 +112,17 @@ const Footer = ({ siteMetadata, sponsors = {} }) => {
         <div className="sponsor-container">
           <SecondaryHeading>Thank You {year} Sponsors</SecondaryHeading>
           <SponsorGrid>
-            {sponsors.edges.map(sponsor => (
-              <div>
-                <img src={`images/${sponsor.node.img}`} />
-              </div>
-            ))}
+            {sponsors.edges.map(sponsor => {
+              const img = images.find(img => img.node.base === sponsor.node.img)
+              return (
+                <SponsorItem
+                  img={img.node.publicURL}
+                  background={sponsor.node.background}
+                  href={sponsor.node.url}
+                  target="_blank"
+                />
+              )
+            })}
           </SponsorGrid>
         </div>
       </Wrapper>

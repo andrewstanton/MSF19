@@ -55,6 +55,16 @@ const Layout = ({ children }) => (
             node {
               name
               img
+              background
+              url
+            }
+          }
+        }
+        allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+          edges {
+            node {
+              publicURL
+              base
             }
           }
         }
@@ -68,6 +78,7 @@ const Layout = ({ children }) => (
         <Footer
           siteMetadata={data.site.siteMetadata}
           sponsors={data.allSponsorsJson}
+          images={data.allFile.edges}
         />
       </div>
     )}
