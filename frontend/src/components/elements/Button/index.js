@@ -12,29 +12,29 @@ const MODIFIER_CONFIG = {
   `,
   borderBlue: () => css`
     background-color: transparent;
-    color: ${Color.blue};
+    color: ${Color.blue} !important;
     border: 1px solid ${Color.blue};
     &:hover {
       background-color: ${Color.blue};
-      color: ${Color.white};
+      color: ${Color.white} !important;
     }
   `,
   orange: () => css`
     background-color: ${Color.orange};
-    color: ${Color.white};
+    color: ${Color.white} !important;
   `,
   borderOrange: () => css`
     background-color: transparent;
-    color: ${Color.orange};
+    color: ${Color.orange} !important;
     border: 1px solid ${Color.orange};
     &:hover {
       background-color: ${Color.orange};
-      color: ${Color.white};
+      color: ${Color.white} !important;
     }
   `,
 }
 
-export const Button = styled.button`
+const buttonCSS = css`
   border: 0;
   border-radius: 3px;
   padding: 1.25rem 1.75rem;
@@ -56,4 +56,18 @@ export const Button = styled.button`
   }
 
   ${applyStyleModifiers(MODIFIER_CONFIG)}
+`
+
+export const Button = styled.button`
+  ${buttonCSS}
+`
+
+export const ButtonHTMLLink = styled.a`
+  ${buttonCSS}
+  text-decoration: none !important;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `

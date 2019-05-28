@@ -1,15 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layouts/Layout"
 
-import { InnerBanner, Section, Button } from "../components/elements"
-import { Flex, Col, AlignCenter } from "../components/utilities"
+import { InnerBanner, Section } from "../components/elements"
+
+import banner from "../images/banners/music.jpg"
 
 const MusicPage = () => (
   <Layout>
-    <InnerBanner />
-    <Section>Music Page</Section>
+    <InnerBanner image={banner}>
+      <h2>MSF Music</h2>
+    </InnerBanner>
+    <Section>
+      <h2>More Details Coming Soon...</h2>
+    </Section>
   </Layout>
 )
 

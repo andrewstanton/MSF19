@@ -1,10 +1,28 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/layouts/Layout"
 
 import { HomeBanner, Section, Button } from "../components/elements"
 import { Flex, Col, AlignCenter } from "../components/utilities"
+
+import parade from "../images/activities/parade.jpg"
+
+const ParadeSection = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    max-width: 450px;
+    border-radius: 100%;
+  }
+
+  .info {
+    padding: 0 2rem;
+  }
+`
 
 const IndexPage = () => (
   <Layout>
@@ -33,15 +51,22 @@ const IndexPage = () => (
       </Flex>
     </Section>
     <Section modifiers="light">
-      <h2>2019 Parade - Come One, Come All - Circus</h2>
-      The parade theme is here, and participants can sign up now. Please follow
-      the link below and download a copy of the 2018 Maumee Summer Fair parade
-      participate form
-      <AlignCenter>
-        <Button modifiers="borderBlue" marginTop="20px">
-          Download Parade Participant Form
-        </Button>
-      </AlignCenter>
+      <ParadeSection>
+        <div>
+          <img src={parade} />
+        </div>
+        <div className="info">
+          <h2>2019 Parade - Come One, Come All - Circus</h2>
+          The parade theme is here, and participants can sign up now. Please
+          follow the link below and download a copy of the 2018 Maumee Summer
+          Fair parade participate form
+          <AlignCenter>
+            <Button modifiers="borderBlue" marginTop="20px">
+              Download Parade Participant Form
+            </Button>
+          </AlignCenter>
+        </div>
+      </ParadeSection>
     </Section>
   </Layout>
 )

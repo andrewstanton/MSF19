@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Barr's Public House",
+    "img": "b.jpg",
+    "background": "#160b03",
+    "url": "http://www.barrspublichouse.com/"
+  },
+  {
+    "name": "Champions Bar & Grill",
+    "img": "brandywine.jpg",
+    "background": "white",
+    "url": "https://brandywinecc.com/"
+  },
+  {
+    "name": "Cold Stone",
+    "img": "coldstone.jpg",
+    "background": "white",
+    "url": "https://www.coldstonecreamery.com/"
+  },
+  {
+    "name": "Deet's BBQ",
+    "img": "deets.jpg",
+    "background": "white",
+    "url": "http://deetsbbq.com/"
+  },
+  {
+    "name": "El Salto",
+    "img": "elsalto.jpg",
+    "background": "white",
+    "url": "http://elsaltoinohio.com"
+  },
+  {
+    "name": "Frickers",
+    "img": "frickers.jpg",
+    "background": "white",
+    "url": "https://www.frickers.com/"
+  },
+  {
+    "name": "Jacky's Depot",
+    "img": "jackys.jpg",
+    "background": "white",
+    "url": "https://www.facebook.com/JackysDepotMaumee"
+  },
+  {
+    "name": "La Fiesta",
+    "img": "lafiesta.jpg",
+    "background": "#fcdf8c",
+    "url": "http://lafiestarestaurante.com/"
+  },
+  {
+    "name": "Max and Erma's",
+    "img": "max-erma.jpg",
+    "background": "black",
+    "url": "http://www.maxandermas.com/"
+  },
+  {
+    "name": "PizzAroma",
+    "img": "pizzaroma.jpg",
+    "background": "black",
+    "url": "https://pizzaromamaumee.com/"
+  },
+  {
+    "name": "R-Taco",
+    "img": "r-taco-1.jpg",
+    "background": "white",
+    "url": "https://www.rtacos.com/"
+  },
+  {
+    "name": "Sidelines",
+    "img": "sidelines.jpg",
+    "background": "white",
+    "url": "https://www.sidelinessportseatery.com/"
+  },
+  {
+    "name": "Tropical Smoothie",
+    "img": "tropical.jpg",
+    "background": "white",
+    "url": "https://www.tropicalsmoothiecafe.com/"
+  }
+]
