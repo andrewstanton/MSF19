@@ -5,7 +5,7 @@ import styled from "styled-components"
 import Layout from "../components/layouts/Layout"
 
 import { HomeBanner, Section, Button } from "../components/elements"
-import { Flex, Col, AlignCenter } from "../components/utilities"
+import { Flex, Col, AlignCenter, Media } from "../components/utilities"
 
 import parade from "../images/activities/parade.jpg"
 
@@ -22,6 +22,24 @@ const ParadeSection = styled.div`
   .info {
     padding: 0 2rem;
   }
+
+  ${Media.below.desktop`
+    img {
+      max-width: 300px;
+    }
+  `}
+
+  ${Media.below.tablet`
+      flex-wrap: wrap;
+
+      img {
+        max-width: 100%;
+      }
+
+      >div {
+        flex: 100%;
+      }
+    `}
 `
 
 const IndexPage = () => (

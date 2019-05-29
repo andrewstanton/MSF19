@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 import { normalize } from "polished"
 
-import { Color, Type } from "../../utilities"
+import { Color, Type, Media } from "../../utilities"
 
 export const GlobalStyles = createGlobalStyle`
     ${normalize()};
@@ -39,4 +39,25 @@ export const GlobalStyles = createGlobalStyle`
     h4 {
         font-size: 1.5rem;
     }
+
+    ${Media.below.mobile`
+        .m-hidden {
+            display: none;
+        }
+    `}
+
+    ${Media.below.tablet`
+        .mt-hidden {
+            display: none;
+        }
+    `}
+
+    
+    ${Media.above.tablet`
+        ${Media.below.desktop`
+            .t-hidden {
+                display: none;
+            }
+        `}
+    `}
 `

@@ -8,7 +8,7 @@ import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons"
 import * as moment from "moment"
 
 import Navbar from "../Navbar"
-import { Color, Type, Wrapper } from "../../utilities"
+import { Color, Type, Wrapper, Media } from "../../utilities"
 
 import logo from "../../../images/logo.png"
 
@@ -27,6 +27,13 @@ const StyledWrapper = styled(Wrapper)`
   .logo {
     max-width: ${logoWidth};
   }
+
+  ${Media.below.mobile`
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1em;
+    text-align: center;
+  `}
 `
 
 const HeaderRight = styled.div`
@@ -53,6 +60,10 @@ const HeaderRight = styled.div`
       }
     }
   }
+
+  ${Media.below.tablet`
+    grid-template-columns: 1fr;
+  `}
 `
 
 const Header = ({ siteMetadata = {} }) => {
@@ -75,7 +86,7 @@ const Header = ({ siteMetadata = {} }) => {
               <br />
               <span className="bold-date">{endDate}</span> {end.time}
             </div>
-            <div>
+            <div className="mt-hidden">
               Follow Us:
               <br />
               <div className="social">

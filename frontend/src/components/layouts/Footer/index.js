@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 import * as moment from "moment"
 
-import { Color, Wrapper, Flex, Col, Type } from "../../utilities"
+import { Color, Wrapper, Flex, Col, Type, Media } from "../../utilities"
 
 const StyledFooter = styled.div`
   background-color: ${Color.grey};
@@ -52,6 +52,14 @@ const SponsorGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 1rem;
+
+  ${Media.below.tablet`
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  `}
+
+  ${Media.below.mobile`
+    grid-template-columns: 1fr 1fr 1fr;
+  `}
 `
 
 const SponsorItem = styled.a`
