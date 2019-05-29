@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import { Color, Type, Wrapper } from "../../utilities"
+import { Color, Type, Wrapper, Media } from "../../utilities"
 
 const StyledNavbar = styled.nav`
   background: ${Color.grey};
@@ -12,6 +12,10 @@ const StyledNavbar = styled.nav`
 
 const StyledWrapper = styled(Wrapper)`
   display: flex;
+
+  ${Media.below.mobile`
+    flex-wrap: wrap;
+  `}
 `
 
 const StyledLink = styled(Link)`
@@ -55,6 +59,14 @@ const StyledLink = styled(Link)`
       width: 400px;
     }
   }
+
+  ${Media.below.mobile`
+    flex: 100%;
+
+    &:hover {
+      transform: none;
+    }
+  `}
 `
 
 const Navbar = ({ nav }) => (
