@@ -1,7 +1,20 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+import { linearGradient, lighten } from "polished"
 
 import { Color, Type } from "../../utilities"
+import { Button } from "../../elements"
+
+import city from "../../../images/svg/city.svg"
+import grass from "../../../images/svg/grass.svg"
+import balloons from "../../../images/svg/balloons.svg"
+import cloud1 from "../../../images/svg/cloud-1.svg"
+import cloud2 from "../../../images/svg/cloud-2.svg"
+import cloud3 from "../../../images/svg/cloud-3.svg"
+
+import car1 from "../../../images/svg/car-truck.svg"
+import car2 from "../../../images/svg/car-purple.svg"
+import car3 from "../../../images/svg/car-red.svg"
 
 export const Banner = styled.div`
   background: ${props => `url(${props.image})` || "grey"};
@@ -11,8 +24,340 @@ export const Banner = styled.div`
   height: ${props => props.height || "auto"};
 `
 
+// Fireworks
+const fwBang = keyframes`
+  to {
+    box-shadow: ${props => props.fwShadow.shadow};
+  }
+`
+const fwGravity = keyframes`
+  to {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+`
+const fwPosition = keyframes`
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%, 59.9% {  
+    margin-top: 20%;
+    margin-left: 70%
+  }
+  60%, 79.9% {  
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%, 99.9% {  
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+`
+
+const ballonBounce = keyframes`
+  0%, 100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+`
+
+const ballonBounceOpposite = keyframes`
+  0%, 100% {
+    transform: translateY(15px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+`
+
+const carLeftToRight = keyframes`
+  from {
+    left: -20%;
+  }
+  to {
+    left: 120%;
+  }
+`
+const carRightToLeft = keyframes`
+  from {
+    left: 120%;
+  }
+  to {
+    left: -20%;
+  }
+`
+
+const overlayText = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`
+
+const cloudLeftToRight = keyframes`
+  0% {
+    left: -20%;
+    transform: translateY(0);
+  }
+  30% {
+    left: 30%;
+    transform: translateY(-30px);
+  }
+  60% {
+    left: 60%;
+    transform: translateY(30px);
+  }
+  100% {
+    left: 105%;
+    transform: translateY(-30deg);
+  }
+`
+
+const cloudRightToLeft = keyframes`
+  0% {
+    left: 105%;
+    transform: translateY(0);
+  }
+  30% {
+    left: 60%%;
+    transform: translateY(30px);
+  }
+  60% {
+    left: 30%;
+    transform: translateY(-30px);
+  }
+  100% {
+    left: -20%;
+    transform: translateY(30deg);
+  }
+`
+
+const StyledHomeBanner = styled(Banner)`
+  ${linearGradient({
+    colorStops: [`${Color.sky} 50%`, `${lighten("0.2", Color.sky)} 100%`],
+    toDirection: "to top",
+    fallback: Color.sky,
+  })}
+  overflow: hidden;
+  height: 900px;
+  position: relative;
+  transform-style: perserve-3d;
+  perspective: 1px;
+
+  .city {
+    position: absolute;
+    width: 120%;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    user-select: none;
+  }
+
+  .grass {
+    position: absolute;
+    width: 100%;
+    bottom: -70px;
+    z-index: 20;
+    user-select: none;
+  }
+
+  .cloud {
+    position: absolute;
+    z-index: 5;
+    opacity: 0.5;
+    user-select: none;
+
+    &--1 {
+      width: 250px;
+      animation: ${cloudLeftToRight} 70s linear infinite;
+      top: 10%;
+    }
+
+    &--2 {
+      width: 280px;
+      animation: ${cloudRightToLeft} 50s linear infinite;
+      top: 30%;
+    }
+
+    &--3 {
+      width: 200px;
+      top: 40%;
+      animation: ${cloudRightToLeft} 30s linear infinite;
+    }
+
+    &--5 {
+      width: 200px;
+      animation: ${cloudLeftToRight} 50s linear infinite;
+      top: 15%;
+    }
+
+    &--6 {
+      width: 300px;
+      animation: ${cloudRightToLeft} 90s linear infinite;
+      top: 35%;
+    }
+
+    &--7 {
+      width: 120px;
+      top: 35%;
+      animation: ${cloudRightToLeft} 40s linear infinite;
+    }
+  }
+
+  .car {
+    position: absolute;
+    z-index: 15;
+    width: 10%;
+    bottom: 80px;
+
+    &--1 {
+      animation: ${carLeftToRight} 30s ease infinite;
+      left: -20%;
+      animation-delay: 2s
+      z-index: 16;
+    }
+
+    &--2 {
+      z-index: 17;
+      animation: ${carLeftToRight} 20s ease infinite;
+      bottom: 60px;
+    }
+
+    &--3 {
+      animation: ${carRightToLeft} 20s ease infinite;
+    }
+  }
+
+  .balloons {
+    position: absolute;
+    z-index: 12;
+    animation: ${ballonBounce} 4s ease infinite;
+    width: 3.5%;
+
+    &--1 {
+      bottom: 120px;
+      left: 100px;
+    }
+
+    &--2 {
+      bottom: 130px;
+      left: 45%;
+      animation: ${ballonBounceOpposite} 5s ease infinite;
+    }
+
+    &--3 {
+      bottom: 125px;
+      right: 100px;
+    }
+  }
+
+  .fw {
+    > .before, > .after {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      box-shadow: ${props => props.fwShadow.shadow2};
+      animation: 1s ${fwBang} ease-out infinite backwards, 1s ${fwGravity} ease-in infinite backwards, 10s ${fwPosition} linear infinite backwards;
+    }
+    > .after {
+      animation-delay: 1.25s, 1.25s, 1.25s;
+      animation-duration: 1.25s, 1.25s, 5s;
+    }
+  }
+`
+
+const HomeOverlay = styled.div`
+  position: absolute;
+  top: 80px;
+  text-align: center;
+  color: ${Color.white};
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: ${Type.header};
+  line-height: 300%;
+  z-index: 200;
+
+  h3 {
+    font-size: 42px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    animation: ${overlayText} 1s ease;
+  }
+
+  h1 {
+    font-size: 72px;
+    margin-top: 1rem;
+    color: ${Color.blue};
+    animation: ${overlayText} 1.5s ease;
+  }
+
+  .overlay_buttons {
+    margin-top: 4rem;
+
+    > button,
+    a {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+`
+
 export const HomeBanner = ({ children, ...props }) => (
-  <Banner {...props}>{children}</Banner>
+  <StyledHomeBanner {...props}>
+    <HomeOverlay>
+      <div className="overlay_text">
+        <h3>
+          It's That Time Again!
+          <br />
+          Northwest Ohio's best fair
+        </h3>
+        <h1>August 9th - 10th</h1>
+      </div>
+      <div className="overlay_buttons">
+        <Button modifiers={["white", "colorOrange", "hoverOrange", "large"]}>
+          Delicious Food
+        </Button>
+        <Button modifiers={["white", "colorBlue", "hoverBlue", "large"]}>
+          Enjoyable Music
+        </Button>
+        <Button modifiers={["white", "colorOrange", "hoverOrange", "large"]}>
+          Fun Activites
+        </Button>
+      </div>
+    </HomeOverlay>
+    <div className="fw">
+      <div className="before" />
+      <div className="after" />
+    </div>
+
+    <img src={city} className="city" />
+    <img src={grass} className="grass" />
+    <img src={balloons} className="balloons balloons--1" />
+    <img src={balloons} className="balloons  balloons--2" />
+    <img src={balloons} className="balloons  balloons--3" />
+    <img src={cloud1} className="cloud cloud--1" />
+    <img src={cloud2} className="cloud cloud--2" />
+    <img src={cloud3} className="cloud cloud--3" />
+    <img src={cloud1} className="cloud cloud--5" />
+    <img src={cloud2} className="cloud cloud--6" />
+    <img src={cloud3} className="cloud cloud--7" />
+    <img src={car1} className="car car--1" />
+    <img src={car2} className="car car--2" />
+    <img src={car3} className="car car--3" />
+  </StyledHomeBanner>
 )
 
 const StyledInnerBanner = styled(Banner)`

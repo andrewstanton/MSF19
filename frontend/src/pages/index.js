@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { hsl } from "polished"
 
 import Layout from "../components/layouts/Layout"
 
@@ -41,10 +42,32 @@ const ParadeSection = styled.div`
       }
     `}
 `
+const particles = 50
+const width = 500
+const height = 500
+
+const randomNumber = (min = 0, max = 1) =>
+  Math.floor(Math.random() * (max - min)) + min
+
+const boxShadows = () => {
+  let shadow = ""
+  let shadow2 = ""
+  for (let i = 0; i < particles; i++) {
+    if (i !== 0) {
+      shadow += `, `
+      shadow2 += `, `
+    }
+    shadow += `${randomNumber(1, width) - width / 2}px ${randomNumber(height) -
+      height / 1.2}px ${hsl(randomNumber(1, 360), 1, 0.5)}`
+    shadow2 += `0 0 #fff`
+  }
+  console.log({ shadow, shadow2 })
+  return { shadow, shadow2 }
+}
 
 const IndexPage = () => (
   <Layout>
-    <HomeBanner />
+    <HomeBanner fwShadow={boxShadows()} />
     <Section>
       <Flex>
         <Col>

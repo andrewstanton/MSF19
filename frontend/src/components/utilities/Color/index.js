@@ -5,4 +5,5 @@ export const Color = {
   black: "#000000",
   grey: "#444444",
   light_grey: "#ededed",
+  sky: "#7AC4CD",
 }

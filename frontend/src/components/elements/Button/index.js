@@ -19,6 +19,11 @@ const MODIFIER_CONFIG = {
       color: ${Color.white} !important;
     }
   `,
+  borderWhite: () => css`
+    background-color: transparent;
+    color: ${Color.white} !important;
+    border: 1px solid ${Color.white};
+  `,
   orange: () => css`
     background-color: ${Color.orange};
     color: ${Color.white} !important;
@@ -29,6 +34,39 @@ const MODIFIER_CONFIG = {
     border: 1px solid ${Color.orange};
     &:hover {
       background-color: ${Color.orange};
+      color: ${Color.white} !important;
+    }
+  `,
+
+  white: () => css`
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid ${Color.white};
+  `,
+
+  colorBlue: () => css`
+    color: ${Color.blue};
+    border: 1px solid ${Color.blue};
+  `,
+
+  colorOrange: () => css`
+    color: ${Color.orange};
+    border: 1px solid ${Color.orange};
+  `,
+
+  large: () => css`
+    font-size: 2rem;
+    padding: 2rem 2.5rem;
+  `,
+
+  hoverOrange: () => css`
+    &:hover {
+      background-color: ${Color.orange};
+      color: ${Color.white} !important;
+    }
+  `,
+  hoverBlue: () => css`
+    &:hover {
+      background-color: ${Color.blue};
       color: ${Color.white} !important;
     }
   `,

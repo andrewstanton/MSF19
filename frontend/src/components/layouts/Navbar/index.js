@@ -72,8 +72,10 @@ const StyledLink = styled(Link)`
 const Navbar = ({ nav }) => (
   <StyledNavbar>
     <StyledWrapper>
-      {nav.map(link => (
-        <StyledLink to={link.url}>{link.label}</StyledLink>
+      {nav.map((link, ix) => (
+        <StyledLink key={ix} to={link.url}>
+          {link.label}
+        </StyledLink>
       ))}
     </StyledWrapper>
   </StyledNavbar>

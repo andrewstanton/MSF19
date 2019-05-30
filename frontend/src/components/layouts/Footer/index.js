@@ -111,8 +111,10 @@ const Footer = ({ siteMetadata = {}, sponsors = {}, images = {} }) => {
           <Col>
             <FooterLinks>
               <StyledFooterLink to="/">Home</StyledFooterLink>
-              {nav.map(link => (
-                <StyledFooterLink to={link.url}>{link.label}</StyledFooterLink>
+              {nav.map((link, ix) => (
+                <StyledFooterLink key={ix} to={link.url}>
+                  {link.label}
+                </StyledFooterLink>
               ))}
             </FooterLinks>
           </Col>
@@ -120,10 +122,11 @@ const Footer = ({ siteMetadata = {}, sponsors = {}, images = {} }) => {
         <div className="sponsor-container">
           <SecondaryHeading>Thank You {year} Sponsors</SecondaryHeading>
           <SponsorGrid>
-            {sponsors.edges.map(sponsor => {
+            {sponsors.edges.map((sponsor, ix) => {
               const img = images.find(img => img.node.base === sponsor.node.img)
               return (
                 <SponsorItem
+                  key={ix}
                   img={img.node.publicURL}
                   background={sponsor.node.background}
                   href={sponsor.node.url}
