@@ -7,7 +7,12 @@ import { Button } from "../../elements"
 
 import city from "../../../images/svg/city.svg"
 import grass from "../../../images/svg/grass.svg"
+
 import balloons from "../../../images/svg/balloons.svg"
+import ballon1 from "../../../images/svg/balloon-green.svg"
+import ballon2 from "../../../images/svg/balloon-orange.svg"
+import ballon3 from "../../../images/svg/balloon-red.svg"
+
 import cloud1 from "../../../images/svg/cloud-1.svg"
 import cloud2 from "../../../images/svg/cloud-2.svg"
 import cloud3 from "../../../images/svg/cloud-3.svg"
@@ -23,13 +28,17 @@ export const Banner = styled.div`
   background-size: cover;
   height: ${props => props.height || "auto"};
 `
+const balloonArr = [ballon1, ballon2, ballon3]
 
 // Fireworks
-const fwBang = keyframes`
+const fwBang = props => {
+  return keyframes`
   to {
-    box-shadow: ${props => props.fwShadow.shadow};
+    box-shadow: ${props.fwShadow.shadow};
   }
 `
+}
+
 const fwGravity = keyframes`
   to {
     transform: translateY(200px);
@@ -140,6 +149,32 @@ const cloudRightToLeft = keyframes`
   100% {
     left: -20%;
     transform: translateY(30deg);
+  }
+`
+
+const balloonRise = keyframes`
+  0% {
+    top: 100%;
+    transform: translateX(5px);
+  }
+  50% {
+    top: 50%;
+    transform: translateX(0px);
+  }
+  100% {
+    top: -10%;
+    transform: translateX(-5px);
+  }
+`
+
+const randomNumber = (min = 0, max = 1) =>
+  Math.floor(Math.random() * (max - min)) + min
+
+const randomBalloon = keyframes`
+  to {
+    background-image: url(${
+      balloonArr[randomNumber(0, balloonArr.length - 1)]
+    });
   }
 `
 
@@ -270,12 +305,47 @@ const StyledHomeBanner = styled(Banner)`
       height: 5px;
       border-radius: 50%;
       box-shadow: ${props => props.fwShadow.shadow2};
-      animation: 1s ${fwBang} ease-out infinite backwards, 1s ${fwGravity} ease-in infinite backwards, 10s ${fwPosition} linear infinite backwards;
+      animation: 1s ${props =>
+        fwBang(
+          props
+        )} ease-out infinite backwards, 1s ${fwGravity} ease-in infinite backwards, 5s ${fwPosition} linear infinite backwards;
     }
     > .after {
       animation-delay: 1.25s, 1.25s, 1.25s;
-      animation-duration: 1.25s, 1.25s, 5s;
+      animation-duration: 1.25s, 1.25s, 6.25s;
     }
+  }
+
+  .looseBalloon {
+    position: absolute;
+    width: 20px;
+    height: 80px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 9;
+    top: 100%;
+
+    &--1 {
+      left: ${randomNumber(20, 40)}%;
+      background-image: url(${balloonArr[0]});
+      animation: ${randomNumber(10, 20)}s ${balloonRise} linear infinite;
+      animation-delay: 1s;
+    }
+    &--2 {
+      left: ${randomNumber(40, 60)}%;
+      background-image: url(${balloonArr[1]});
+      animation: ${randomNumber(10, 20)}s ${balloonRise} linear infinite;
+      animation-delay: 10s;
+    }
+
+    &--3 {
+      left: ${randomNumber(60, 80)}%;
+      background-image: url(${balloonArr[2]});
+      animation: ${randomNumber(10, 20)}s ${balloonRise} linear infinite;
+      animation-delay: 5s;
+    }
+
   }
 `
 
@@ -343,6 +413,9 @@ export const HomeBanner = ({ children, ...props }) => (
       <div className="after" />
     </div>
 
+    <div className="looseBalloon looseBalloon--1" />
+    <div className="looseBalloon looseBalloon--2" />
+    <div className="looseBalloon looseBalloon--3" />
     <img src={city} className="city" />
     <img src={grass} className="grass" />
     <img src={balloons} className="balloons balloons--1" />

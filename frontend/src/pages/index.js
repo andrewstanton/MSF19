@@ -61,7 +61,6 @@ const boxShadows = () => {
       height / 1.2}px ${hsl(randomNumber(1, 360), 1, 0.5)}`
     shadow2 += `0 0 #fff`
   }
-  console.log({ shadow, shadow2 })
   return { shadow, shadow2 }
 }
 
