@@ -1,9 +1,9 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { linearGradient, lighten } from "polished"
+import { linearGradient, lighten, darken } from "polished"
 
 import { Color, Type } from "../../utilities"
-import { Button } from "../../elements"
+import { ButtonLink } from "../../elements"
 
 import city from "../../../images/svg/city.svg"
 import grass from "../../../images/svg/grass.svg"
@@ -170,25 +170,33 @@ const balloonRise = keyframes`
 const randomNumber = (min = 0, max = 1) =>
   Math.floor(Math.random() * (max - min)) + min
 
-const randomBalloon = keyframes`
-  to {
-    background-image: url(${
-      balloonArr[randomNumber(0, balloonArr.length - 1)]
-    });
+const dayToNight = keyframes`
+  0%, 55%, 100% {
+    background-position: 0% 100%;
+  }
+  60%, 95% {
+    background-position: 0% 0%;
   }
 `
 
 const StyledHomeBanner = styled(Banner)`
   ${linearGradient({
-    colorStops: [`${Color.sky} 50%`, `${lighten("0.2", Color.sky)} 100%`],
+    colorStops: [
+      `${lighten("0.2", Color.sky)} 0%`,
+      `${Color.sky} 50%`,
+      `${darken("0.9", Color.sky)} 100%`,
+    ],
     toDirection: "to top",
     fallback: Color.sky,
   })}
+  background-size: 400% 400%;
+  transition: all 0.2 ease;
   overflow: hidden;
   height: 900px;
   position: relative;
   transform-style: perserve-3d;
   perspective: 1px;
+  animation: ${dayToNight} 30s linear infinite;
 
   .city {
     position: absolute;
@@ -379,7 +387,8 @@ const HomeOverlay = styled.div`
 
     > button,
     a {
-      margin-left: 10px;
+      display: inline-block;
+      lmargin-left: 10px;
       margin-right: 10px;
     }
   }
@@ -397,15 +406,24 @@ export const HomeBanner = ({ children, ...props }) => (
         <h1>August 9th - 10th</h1>
       </div>
       <div className="overlay_buttons">
-        <Button modifiers={["white", "colorOrange", "hoverOrange", "large"]}>
+        <ButtonLink
+          modifiers={["white", "colorOrange", "hoverOrange", "large"]}
+          to="/food"
+        >
           Delicious Food
-        </Button>
-        <Button modifiers={["white", "colorBlue", "hoverBlue", "large"]}>
+        </ButtonLink>
+        <ButtonLink
+          modifiers={["white", "colorBlue", "hoverBlue", "large"]}
+          to="/music"
+        >
           Enjoyable Music
-        </Button>
-        <Button modifiers={["white", "colorOrange", "hoverOrange", "large"]}>
+        </ButtonLink>
+        <ButtonLink
+          modifiers={["white", "colorOrange", "hoverOrange", "large"]}
+          to="/activities"
+        >
           Fun Activites
-        </Button>
+        </ButtonLink>
       </div>
     </HomeOverlay>
     <div className="fw">

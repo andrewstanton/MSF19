@@ -6,4 +6,5 @@ export const Color = {
   grey: "#444444",
   light_grey: "#ededed",
   sky: "#7AC4CD",
+  night: "#000",
 }

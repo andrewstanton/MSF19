@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import { Link } from "gatsby"
 
 import { applyStyleModifiers } from "styled-components-modifiers"
 
@@ -44,12 +45,12 @@ const MODIFIER_CONFIG = {
   `,
 
   colorBlue: () => css`
-    color: ${Color.blue};
+    color: ${Color.blue} !important;
     border: 1px solid ${Color.blue};
   `,
 
   colorOrange: () => css`
-    color: ${Color.orange};
+    color: ${Color.orange} !important;
     border: 1px solid ${Color.orange};
   `,
 
@@ -98,6 +99,16 @@ const buttonCSS = css`
 
 export const Button = styled.button`
   ${buttonCSS}
+`
+
+export const ButtonLink = styled(Link)`
+  ${buttonCSS}
+  text-decoration: none !important;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `
 
 export const ButtonHTMLLink = styled.a`
