@@ -5,8 +5,15 @@ import { hsl } from "polished"
 
 import Layout from "../components/layouts/Layout"
 
-import { HomeBanner, Section, Button } from "../components/elements"
-import { Flex, Col, AlignCenter, Media, Embed } from "../components/utilities"
+import { HomeBanner, Section, ButtonHTMLLink } from "../components/elements"
+import {
+  Flex,
+  Col,
+  AlignCenter,
+  Media,
+  Embed,
+  SEO,
+} from "../components/utilities"
 
 import parade from "../images/activities/parade.jpg"
 
@@ -76,6 +83,7 @@ const MainTextCol = styled(Col)`
 
 const IndexPage = () => (
   <Layout>
+    <SEO title="Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
     <HomeBanner fwShadow={boxShadows()} />
     <Section>
       <Flex>
@@ -119,9 +127,14 @@ const IndexPage = () => (
           follow the link below and download a copy of the 2018 Maumee Summer
           Fair parade participate form
           <AlignCenter>
-            <Button modifiers="borderBlue" marginTop="20px">
+            <ButtonHTMLLink
+              href="http://maumeesummerfair.com/pdfs/2019-parade.pdf"
+              target="_blank"
+              modifiers="borderBlue"
+              marginTop="20px"
+            >
               Download Parade Participant Form
-            </Button>
+            </ButtonHTMLLink>
           </AlignCenter>
         </div>
       </ParadeSection>

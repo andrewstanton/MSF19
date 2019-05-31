@@ -6,7 +6,7 @@ import { darken } from "polished"
 import Layout from "../components/layouts/Layout"
 
 import { InnerBanner, Section } from "../components/elements"
-import { Wrapper, Color, Type } from "../components/utilities"
+import { Wrapper, Color, Type, SEO } from "../components/utilities"
 
 import banner from "../images/banners/food.jpg"
 import badge from "../images/taste.png"
@@ -114,6 +114,7 @@ const FoodVendors = () => (
 
 const FoodPage = () => (
   <Layout>
+    <SEO title="Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
     <InnerBanner image={banner} height="400px">
       <FoodBannerWrapper>
         <img src={badge} />

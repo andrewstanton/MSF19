@@ -15,7 +15,7 @@ import {
   SpikeSectionBox,
   ButtonHTMLLink,
 } from "../components/elements"
-import { Color, Type, Flex, Col } from "../components/utilities"
+import { Color, Type, Flex, Col, SEO } from "../components/utilities"
 
 import banner from "../images/banners/music.jpg"
 
@@ -67,6 +67,7 @@ const PaddingCol = styled(Col)`
 
 const MusicPage = () => (
   <Layout>
+    <SEO title="Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
     <InnerBanner image={banner}>
       <h2>MSF Music</h2>
     </InnerBanner>

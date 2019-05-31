@@ -10,6 +10,7 @@ import {
   SpikeSection,
   SpikeSectionBox,
 } from "../components/elements"
+import { SEO } from "../components/utilities"
 
 import banner from "../images/banners/activity.jpg"
 import carshow from "../images/activities/carshow.jpg"
@@ -21,6 +22,7 @@ import parade from "../images/activities/parade.jpg"
 
 const ActivitiesPage = () => (
   <Layout>
+    <SEO title="Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
     <InnerBanner image={banner}>
       <h2>Activities</h2>
     </InnerBanner>
@@ -30,7 +32,6 @@ const ActivitiesPage = () => (
 )
 
 const ActivitiesLayout = () => {
-  console.log({ SpikeSectionBox })
   return (
     <Section>
       <SpikeSection modifiers={["orange", "right"]}>
