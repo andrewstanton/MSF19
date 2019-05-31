@@ -1,4 +1,3 @@
-import React from "react"
 import styled from "styled-components"
 
 export const Embed = styled.div`
@@ -7,10 +6,8 @@ export const Embed = styled.div`
   margin: 0;
   position: relative;
   display: block;
-  height: 0;
   padding: 0;
   overflow: hidden;
-  padding-bottom: 56.25%'
 
   > iframe {
     position: absolute;
@@ -19,5 +16,11 @@ export const Embed = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
   }
 `

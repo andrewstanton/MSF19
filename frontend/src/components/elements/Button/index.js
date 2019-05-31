@@ -3,8 +3,7 @@ import { Link } from "gatsby"
 
 import { applyStyleModifiers } from "styled-components-modifiers"
 
-import { Color } from "../../utilities/Color"
-import { Type } from "../../utilities/Type"
+import { Color, Type, Media } from "../../utilities"
 
 const MODIFIER_CONFIG = {
   blue: () => css`
@@ -57,6 +56,16 @@ const MODIFIER_CONFIG = {
   large: () => css`
     font-size: 2rem;
     padding: 2rem 2.5rem;
+
+    ${Media.below.desktop`
+      font-size: 1.5rem;
+      padding: 1.75rem 2rem;
+    `}
+
+    ${Media.below.tablet`
+      font-size: 1.2rem;
+      padding: 1.5rem 2rem;
+    `}
   `,
 
   hoverOrange: () => css`
@@ -89,6 +98,11 @@ const buttonCSS = css`
   margin-left: ${({ marginLeft }) => marginLeft || "0"};
   margin-right: ${({ marginRight }) => marginRight || "0"};
 
+  ${Media.below.tablet`
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  `}
+
   &:hover {
     transform: scale(1.3);
     border-radius: 20px;
@@ -119,4 +133,10 @@ export const ButtonHTMLLink = styled.a`
   align-items: center;
   justify-content: center;
   text-align: center;
+`
+
+export const BannerButton = styled(ButtonLink)`
+  ${Media.below.tablet`
+    padding: 1rem;
+  `}
 `

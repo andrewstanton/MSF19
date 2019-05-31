@@ -6,7 +6,7 @@ import { hsl } from "polished"
 import Layout from "../components/layouts/Layout"
 
 import { HomeBanner, Section, Button } from "../components/elements"
-import { Flex, Col, AlignCenter, Media } from "../components/utilities"
+import { Flex, Col, AlignCenter, Media, Embed } from "../components/utilities"
 
 import parade from "../images/activities/parade.jpg"
 
@@ -15,9 +15,14 @@ const ParadeSection = styled.div`
   justify-content: space-between;
   align-items: center;
 
+  div:first-child {
+    text-align: center;
+  }
+
   img {
     max-width: 450px;
     border-radius: 100%;
+    max-height: 300px;
   }
 
   .info {
@@ -64,6 +69,11 @@ const boxShadows = () => {
   return { shadow, shadow2 }
 }
 
+const MainTextCol = styled(Col)`
+  padding: 2.5rem;
+  margin-left: 1rem;
+`
+
 const IndexPage = () => (
   <Layout>
     <HomeBanner fwShadow={boxShadows()} />
@@ -71,8 +81,16 @@ const IndexPage = () => (
       <Flex>
         <Col>
           <h2>2018 Summer Fair Commerical</h2>
+          <Embed>
+            <iframe
+              src="https://www.youtube.com/embed/dcvOBHy11vA"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </Embed>
         </Col>
-        <Col>
+        <MainTextCol>
           <p>
             The annual <Link>Maumee Summer Fair</Link> is held each August on
             beautifully tree-lined streets in the historic uptown district of
@@ -87,7 +105,7 @@ const IndexPage = () => (
             Taste of Maumee food vendors. Join us for a fun-filled weekend in
             uptown Maumee. Presented by the Maumee Uptown Business Association.
           </p>
-        </Col>
+        </MainTextCol>
       </Flex>
     </Section>
     <Section modifiers="light">

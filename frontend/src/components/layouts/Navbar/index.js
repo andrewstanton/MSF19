@@ -1,8 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 
 import { Color, Type, Wrapper, Media } from "../../utilities"
+import { Button } from "../../elements"
 
 const StyledNavbar = styled.nav`
   background: ${Color.grey};
@@ -15,6 +18,12 @@ const StyledWrapper = styled(Wrapper)`
 
   ${Media.below.mobile`
     flex-wrap: wrap;
+    transition: all 0.2s ease;
+
+    &.closed {
+      overflow: hidden;
+      height: 0;
+    }
   `}
 `
 
@@ -69,16 +78,53 @@ const StyledLink = styled(Link)`
   `}
 `
 
-const Navbar = ({ nav }) => (
-  <StyledNavbar>
-    <StyledWrapper>
-      {nav.map((link, ix) => (
-        <StyledLink key={ix} to={link.url}>
-          {link.label}
-        </StyledLink>
-      ))}
-    </StyledWrapper>
-  </StyledNavbar>
-)
+const NavButton = styled(Button)`
+  width: 100%;
+  margin: auto;
+  background: ${Color.grey};
+  color: ${Color.white};
+  font-size: 1.5rem !important;
+  padding: 1.5rem !important;
+  display: none;
+  border-radius: 3px !important;
+
+  &:hover {
+    transform: none;
+    border-radius: none;
+  }
+
+  &.open {
+    background-color: ${Color.orange} !important;
+  }
+
+  ${Media.below.mobile`
+    display: block;
+  `}
+`
+
+const NavIcon = styled(FontAwesomeIcon)`
+  margin-right: 1rem;
+`
+
+const Navbar = ({ nav }) => {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <StyledNavbar>
+      <NavButton onClick={() => setOpen(!open)} className={`${open && "open"}`}>
+        <NavIcon icon={!open ? faBars : faTimes} />
+        {!open ? `Open ` : `Close `}
+        Navigation
+      </NavButton>
+      <StyledWrapper className={`${!open && "closed"}`}>
+        {nav.map((link, ix) => (
+          <StyledLink key={ix} to={link.url}>
+            {link.label}
+          </StyledLink>
+        ))}
+      </StyledWrapper>
+    </StyledNavbar>
+  )
+}
 
 export default Navbar
