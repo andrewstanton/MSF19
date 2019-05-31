@@ -6,7 +6,7 @@ import { darken } from "polished"
 import Layout from "../components/layouts/Layout"
 
 import { InnerBanner, Section } from "../components/elements"
-import { Wrapper, Color, Type, SEO } from "../components/utilities"
+import { Wrapper, Color, Type, SEO, Media } from "../components/utilities"
 
 import banner from "../images/banners/food.jpg"
 import badge from "../images/taste.png"
@@ -24,12 +24,34 @@ const FoodBannerWrapper = styled(Wrapper)`
     max-height: 100%;
     padding: 0 4rem;
   }
+
+  ${Media.below.tablet`
+    img {
+      display: none;
+    }
+
+    h2 {
+      text-align:center;
+    }
+  `}
 `
 
 const VendorGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 2rem;
+
+  ${Media.below.desktop`
+    grid-template-columns: 1fr 1fr 1fr;
+  `}
+
+  ${Media.below.tablet`
+    grid-template-columns: 1fr 1fr;
+  `}
+
+  ${Media.below.mobile`
+    grid-template-columns: 1fr;
+  `}
 `
 
 const VendorCol = styled.a`

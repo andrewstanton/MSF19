@@ -2,7 +2,7 @@
   {
     "name": "Treu House Of Munch",
     "img": "treu.jpg",
-    "background": "black",
+    "background": "#fbad30",
     "url": "http://www.treuhouse.com/"
   },
   {
@@ -24,40 +24,16 @@
     "url": "https://andersonsinc.com/"
   },
   {
-    "name": "PODS",
-    "img": "pods.jpg",
-    "background": "white",
-    "url": "https://www.pods.com/locations/toledo"
-  },
-  {
     "name": "Savage McVicker",
     "img": "savage.jpg",
     "background": "#16315b",
     "url": "https://www.savagemcvicker.com/"
   },
   {
-    "name": "IGS",
-    "img": "igs.jpg",
-    "background": "#006496",
-    "url": "https://www.igsenergy.com"
-  },
-  {
-    "name": "Meijer",
-    "img": "meijer.jpg",
-    "background": "white",
-    "url": "https://www.meijer.com"
-  },
-  {
     "name": "Elizabeth Scott Community",
     "img": "es-1.jpg",
     "background": "white",
     "url": "http://www.elizabethscott.org/"
-  },
-  {
-    "name": "AT&T",
-    "img": "atnt.jpg",
-    "background": "white",
-    "url": "https://www.att.com/stores/ohio/maumee/2833"
   },
   {
     "name": "Dales Bar and Grill",

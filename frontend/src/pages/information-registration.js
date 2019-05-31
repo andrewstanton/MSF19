@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Layout from "../components/layouts/Layout"
 
 import { InnerBanner, Section, ButtonHTMLLink } from "../components/elements"
-import { SEO } from "../components/utilities"
+import { SEO, Media } from "../components/utilities"
 
 import banner from "../images/banners/fair.png"
 
@@ -14,6 +14,10 @@ const LinkGrid = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
   margin-top: 2rem;
+
+  ${Media.below.tablet`
+    grid-template-columns: 1fr;
+  `}
 `
 
 const InfoRegistrationPage = () => (

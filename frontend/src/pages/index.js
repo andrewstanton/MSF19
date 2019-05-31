@@ -1,90 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
-import { hsl } from "polished"
 
 import Layout from "../components/layouts/Layout"
 
 import { HomeBanner, Section, ButtonHTMLLink } from "../components/elements"
-import {
-  Flex,
-  Col,
-  AlignCenter,
-  Media,
-  Embed,
-  SEO,
-} from "../components/utilities"
+import { Flex, Col, AlignCenter, Embed, SEO } from "../components/utilities"
 
 import parade from "../images/activities/parade.jpg"
-
-const ParadeSection = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  div:first-child {
-    text-align: center;
-  }
-
-  img {
-    max-width: 450px;
-    border-radius: 100%;
-    max-height: 300px;
-  }
-
-  .info {
-    padding: 0 2rem;
-  }
-
-  ${Media.below.desktop`
-    img {
-      max-width: 300px;
-    }
-  `}
-
-  ${Media.below.tablet`
-      flex-wrap: wrap;
-
-      img {
-        max-width: 100%;
-      }
-
-      >div {
-        flex: 100%;
-      }
-    `}
-`
-const particles = 50
-const width = 500
-const height = 500
-
-const randomNumber = (min = 0, max = 1) =>
-  Math.floor(Math.random() * (max - min)) + min
-
-const boxShadows = () => {
-  let shadow = ""
-  let shadow2 = ""
-  for (let i = 0; i < particles; i++) {
-    if (i !== 0) {
-      shadow += `, `
-      shadow2 += `, `
-    }
-    shadow += `${randomNumber(1, width) - width / 2}px ${randomNumber(height) -
-      height / 1.2}px ${hsl(randomNumber(1, 360), 1, 0.5)}`
-    shadow2 += `0 0 #fff`
-  }
-  return { shadow, shadow2 }
-}
-
-const MainTextCol = styled(Col)`
-  padding: 2.5rem;
-  margin-left: 1rem;
-`
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
-    <HomeBanner fwShadow={boxShadows()} />
+    <HomeBanner />
     <Section>
       <Flex>
         <Col>
@@ -98,7 +25,7 @@ const IndexPage = () => (
             />
           </Embed>
         </Col>
-        <MainTextCol>
+        <div className="marginTextCol">
           <p>
             The annual <Link>Maumee Summer Fair</Link> is held each August on
             beautifully tree-lined streets in the historic uptown district of
@@ -113,11 +40,11 @@ const IndexPage = () => (
             Taste of Maumee food vendors. Join us for a fun-filled weekend in
             uptown Maumee. Presented by the Maumee Uptown Business Association.
           </p>
-        </MainTextCol>
+        </div>
       </Flex>
     </Section>
     <Section modifiers="light">
-      <ParadeSection>
+      <div className="paradeSection">
         <div>
           <img src={parade} />
         </div>
@@ -137,7 +64,7 @@ const IndexPage = () => (
             </ButtonHTMLLink>
           </AlignCenter>
         </div>
-      </ParadeSection>
+      </div>
     </Section>
   </Layout>
 )
