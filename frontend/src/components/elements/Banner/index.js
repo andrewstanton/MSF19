@@ -31,19 +31,25 @@ export const HomeBanner = ({ children, ...props }) => (
       </div>
       <div className="overlay_buttons">
         <BannerButton
+          modifiers={["white", "colorBlue", "hoverBlue", "large"]}
+          to="/art-crafts"
+        >
+          Local Art / Crafts
+        </BannerButton>
+        <BannerButton
           modifiers={["white", "colorOrange", "hoverOrange", "large"]}
           to="/food"
         >
           Delicious Food
         </BannerButton>
         <BannerButton
-          modifiers={["white", "colorBlue", "hoverBlue", "large"]}
+          modifiers={["white", "colorOrange", "hoverOrange", "large"]}
           to="/music"
         >
           Enjoyable Music
         </BannerButton>
         <BannerButton
-          modifiers={["white", "colorOrange", "hoverOrange", "large"]}
+          modifiers={["white", "colorBlue", "hoverBlue", "large"]}
           to="/activities"
         >
           Fun Activites

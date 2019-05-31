@@ -18,6 +18,10 @@ module.exports = {
         url: "fair-guide",
       },
       {
+        label: "Art / Crafts",
+        url: "art-crafts",
+      },
+      {
         label: "Food",
         url: "food",
       },
