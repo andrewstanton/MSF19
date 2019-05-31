@@ -6,6 +6,7 @@ import Layout from "../components/layouts/Layout"
 import {
   InnerBanner,
   ButtonHTMLLink,
+  Section,
   SpikeSection,
   SpikeSectionBox,
 } from "../components/elements"

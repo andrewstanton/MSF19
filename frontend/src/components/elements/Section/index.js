@@ -3,7 +3,7 @@ import styled, { css } from "styled-components"
 import { lighten } from "polished"
 import { applyStyleModifiers } from "styled-components-modifiers"
 
-import { Wrapper, Type, Color } from "../../utilities"
+import { Wrapper, Type, Color, Media } from "../../utilities"
 
 const MODIFIER_CONFIG = {
   light: () => css`
@@ -21,6 +21,20 @@ const MODIFIER_CONFIG = {
   `,
 }
 
+export const SpikeSectionBox = styled.div`
+  padding: 2em;
+  background-color: ${Color.white};
+  border-width: 6px;
+  border-style: solid;
+  max-width: 50%;
+  transition: all 0.2s ease;
+
+  ${Media.below.desktop`
+    max-width: 70%;
+    margin: auto;
+  `}
+`
+
 const SPIKE_MODIFERS_CONFIG = {
   orange: () => css`
     h1,
@@ -37,7 +51,7 @@ const SPIKE_MODIFERS_CONFIG = {
       background-color: ${lighten("0.1", Color.orange)};
     }
 
-    .${ActivityBox.styledComponentId} {
+    .${SpikeSectionBox.styledComponentId} {
       border-color: ${lighten("0.1", Color.orange)};
     }
   `,
@@ -57,7 +71,7 @@ const SPIKE_MODIFERS_CONFIG = {
       background-color: ${lighten("0.1", Color.blue)};
     }
 
-    .${ActivityBox.styledComponentId} {
+    .${SpikeSectionBox.styledComponentId} {
       border-color: ${lighten("0.1", Color.blue)};
     }
   `,
@@ -72,12 +86,16 @@ const SPIKE_MODIFERS_CONFIG = {
     &:before {
       transform: translate(-50%, -50%) skewX(-35deg) skewY(-5deg);
     }
+    ${Media.below.desktop`
+      flex-direction: reverse;
+    `}
   `,
 }
 
 const StyledSection = styled.section`
   padding: 2em 1em;
   background-color: ${Color.white};
+  overflow: hidden;
 
   h1,
   h2,
@@ -95,15 +113,6 @@ const StyledSection = styled.section`
   }
 
   ${applyStyleModifiers(MODIFIER_CONFIG)};
-`
-
-export const SpikeSectionBox = styled.div`
-  padding: 2em;
-  background-color: ${Color.white};
-  border-width: 6px;
-  border-style: solid;
-  max-width: 50%;
-  transition: all 0.2s ease;
 `
 
 export const SpikeSection = styled.div`
@@ -158,6 +167,19 @@ export const SpikeSection = styled.div`
       transform: scale(1.1);
     }
   }
+
+  ${Media.below.desktop`
+    flex-wrap: wrap;
+
+    &:before {
+      width: 70%;
+      height: 70%;
+    }
+
+    img {
+      display: none;
+    }
+  `}
 
   ${applyStyleModifiers(SPIKE_MODIFERS_CONFIG)}
 `
