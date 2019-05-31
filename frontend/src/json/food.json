@@ -6,12 +6,6 @@
     "url": "http://www.barrspublichouse.com/"
   },
   {
-    "name": "Champions Bar & Grill",
-    "img": "brandywine.jpg",
-    "background": "white",
-    "url": "https://brandywinecc.com/"
-  },
-  {
     "name": "Cold Stone",
     "img": "coldstone.jpg",
     "background": "white",
@@ -40,6 +34,12 @@
     "img": "jackys.jpg",
     "background": "white",
     "url": "https://www.facebook.com/JackysDepotMaumee"
+  },
+  {
+    "name": "Rayoka",
+    "img": "rayoka.png",
+    "background": "white",
+    "url": "http://rayokatoledo.com"
   },
   {
     "name": "La Fiesta",

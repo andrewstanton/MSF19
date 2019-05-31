@@ -1,13 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled, { css } from "styled-components"
-import { lighten } from "polished"
-import { applyStyleModifiers } from "styled-components-modifiers"
 
 import Layout from "../components/layouts/Layout"
 
-import { InnerBanner, ButtonHTMLLink, Section } from "../components/elements"
-import { Color } from "../components/utilities"
+import {
+  InnerBanner,
+  ButtonHTMLLink,
+  SpikeSection,
+  SpikeSectionBox,
+} from "../components/elements"
 
 import banner from "../images/banners/activity.jpg"
 import carshow from "../images/activities/carshow.jpg"
@@ -16,125 +17,6 @@ import kidzone from "../images/activities/kidzone.jpg"
 import iceinice from "../images/activities/iceinice.png"
 import beer from "../images/activities/craftbeer.jpg"
 import parade from "../images/activities/parade.jpg"
-
-const ActivityBox = styled.div`
-  padding: 2em;
-  background-color: ${Color.white};
-  border-width: 6px;
-  border-style: solid;
-  max-width: 50%;
-  transition: all 0.2s ease;
-`
-
-const MODIFERS_CONFIG = {
-  orange: () => css`
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    h7 {
-      color: ${Color.orange};
-    }
-
-    &:before {
-      background-color: ${lighten("0.1", Color.orange)};
-    }
-
-    .${ActivityBox.styledComponentId} {
-      border-color: ${lighten("0.1", Color.orange)};
-    }
-  `,
-
-  blue: () => css`
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    h7 {
-      color: ${Color.blue};
-    }
-
-    &:before {
-      background-color: ${lighten("0.1", Color.blue)};
-    }
-
-    .${ActivityBox.styledComponentId} {
-      border-color: ${lighten("0.1", Color.blue)};
-    }
-  `,
-
-  left: () => css`
-    &:before {
-      transform: translate(-50%, -50%) skewX(-35deg) skewY(5deg);
-    }
-  `,
-
-  right: () => css`
-    &:before {
-      transform: translate(-50%, -50%) skewX(-35deg) skewY(-5deg);
-    }
-  `,
-}
-
-const ActivitySection = styled.div`
-  position: relative;
-  z-index: 10;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  display: flex;
-  align-content: center;
-  justify-content: space-around;
-  align-items: center;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  h7 {
-    text-align: inherit;
-    margin: 0;
-    margin-bottom: 0.5rem;
-  }
-
-  img {
-    max-width: 500px;
-    max-height: 350px;
-    border-radius: 100%;
-  }
-
-  img.no-circle {
-    border-radius: 0;
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    transition: all 0.5s ease;
-    height: 75%;
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    z-index: -1;
-  }
-
-  &:hover {
-    &:before {
-      width: 85%;
-    }
-
-    .${ActivityBox.styledComponentId} {
-      transform: scale(1.1);
-    }
-  }
-
-  ${applyStyleModifiers(MODIFERS_CONFIG)}
-`
 
 const ActivitiesPage = () => (
   <Layout>
@@ -147,11 +29,11 @@ const ActivitiesPage = () => (
 )
 
 const ActivitiesLayout = () => {
-  console.log({ ActivityBox })
+  console.log({ SpikeSectionBox })
   return (
     <Section>
-      <ActivitySection modifiers={["orange", "right"]}>
-        <ActivityBox>
+      <SpikeSection modifiers={["orange", "right"]}>
+        <SpikeSectionBox>
           <h2>Class Car Show 2019</h2>
           <h4>
             Maumee Masonic Complex &amp; <br />
@@ -172,17 +54,17 @@ const ActivitiesLayout = () => {
               Car Show Application Here
             </ButtonHTMLLink>
           </p>
-        </ActivityBox>
+        </SpikeSectionBox>
         <div>
           <img src={carshow} />
         </div>
-      </ActivitySection>
+      </SpikeSection>
 
-      <ActivitySection modifiers={["blue", "left"]}>
+      <SpikeSection modifiers={["blue", "left"]}>
         <div>
           <img src={bike} />
         </div>
-        <ActivityBox>
+        <SpikeSectionBox>
           <h2>BMX DEMONSTRATION</h2>
           <h4>The Right Direction</h4>
           <em>Saturday 10am-3pm</em>
@@ -199,11 +81,11 @@ const ActivitiesLayout = () => {
             <br />
             Enter Off West Wayne / Cass Street
           </p>
-        </ActivityBox>
-      </ActivitySection>
+        </SpikeSectionBox>
+      </SpikeSection>
 
-      <ActivitySection modifiers={["orange", "right"]}>
-        <ActivityBox>
+      <SpikeSection modifiers={["orange", "right"]}>
+        <SpikeSectionBox>
           <h2>Kid Zone</h2>
           <h4>Air Extreme Ohio</h4>
           <em>Friday 5pm to 10:30pm / Saturday 11am to 10:30pm</em>
@@ -216,17 +98,17 @@ const ActivitiesLayout = () => {
             always a draw. Carnival games will be organized by the Perrysburg
             Rowing Club and all proceeds will benefit the HS Rowing Program.
           </p>
-        </ActivityBox>
+        </SpikeSectionBox>
         <div>
           <img src={kidzone} />
         </div>
-      </ActivitySection>
+      </SpikeSection>
 
-      <ActivitySection modifiers={["blue", "left"]}>
+      <SpikeSection modifiers={["blue", "left"]}>
         <div>
           <img src={iceinice} className="no-circle" />
         </div>
-        <ActivityBox>
+        <SpikeSectionBox>
           <h2>Ice In The Ice Contest!</h2>
           <h4>By KISSFM 92.5 and Ice Creations</h4>
           <p>
@@ -249,11 +131,11 @@ const ActivitiesLayout = () => {
           >
             Couples Register Here
           </ButtonHTMLLink>
-        </ActivityBox>
-      </ActivitySection>
+        </SpikeSectionBox>
+      </SpikeSection>
 
-      <ActivitySection modifiers={["orange", "right"]}>
-        <ActivityBox>
+      <SpikeSection modifiers={["orange", "right"]}>
+        <SpikeSectionBox>
           <h2>Craft Beer Tasting</h2>
           <h4>By Treu House Of Munch</h4>
           <em>
@@ -266,17 +148,17 @@ const ActivitiesLayout = () => {
             to <Link to="/music">Maumee Palooza Original Music Stage</Link>{" "}
             performers throughout the afternoon.
           </p>
-        </ActivityBox>
+        </SpikeSectionBox>
         <div>
           <img src={beer} />
         </div>
-      </ActivitySection>
+      </SpikeSection>
 
-      <ActivitySection modifiers={["blue", "left"]}>
+      <SpikeSection modifiers={["blue", "left"]}>
         <div>
           <img src={parade} />
         </div>
-        <ActivityBox>
+        <SpikeSectionBox>
           <h2>Maumee Summer Fair Parade</h2>
           <em>Saturday August 10th at 9am</em>
           <br />
@@ -292,8 +174,8 @@ const ActivitiesLayout = () => {
           <ButtonHTMLLink modifiers="borderBlue">
             Parade Participant Form
           </ButtonHTMLLink>
-        </ActivityBox>
-      </ActivitySection>
+        </SpikeSectionBox>
+      </SpikeSection>
     </Section>
   )
 }
