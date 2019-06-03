@@ -7,6 +7,11 @@ import Layout from "../components/layouts/Layout"
 import reg from "../images/bands/rega.jpg"
 import isuns from "../images/bands/isuns.jpg"
 import dlies from "../images/bands/dirty-lies.jpg"
+import drd from "../images/bands/down-river-dan.jpg"
+import kentucky from "../images/bands/kentucky-chrome.jpg"
+import shakin from "../images/bands/shakin-shivers.jpg"
+import hayden from "../images/bands/jt-hayden.jpg"
+import shutters from "../images/bands/shutters.jpg"
 
 import {
   InnerBanner,
@@ -67,7 +72,7 @@ const PaddingCol = styled(Col)`
 
 const MusicPage = () => (
   <Layout>
-    <SEO title="Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
+    <SEO title="Parking Lot Party & MaumeePalooza - Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
     <InnerBanner image={banner}>
       <h2>MSF Music</h2>
     </InnerBanner>
@@ -83,7 +88,7 @@ const MusicPage = () => (
           <MusicTable>
             <tr>
               <td>
-                <span className="name">In Between Spaces</span>
+                <span className="name">The Cinnamon, Larry Ensemble</span>
                 EMCEE
               </td>
             </tr>
@@ -163,8 +168,149 @@ const MusicPage = () => (
       </Flex>
     </Section>
     <Section modifiers="light">
-      <h2>MaumeePalooza Bands</h2>
+      <h2>Parking Lot Party - Friday Evening</h2>
+
       <SpikeSection modifiers={["blue", "right"]}>
+        <SpikeSectionBox>
+          <h2>Down River Dan</h2>
+          <h4>5:00pm - 8:00pm</h4>
+          <br />
+          <ButtonHTMLLink
+            href="https://www.facebook.com/1DownRiverDan/"
+            target="_blank"
+            modifiers={["borderBlue"]}
+          >
+            Like On Facebook
+          </ButtonHTMLLink>
+        </SpikeSectionBox>
+        <div>
+          <img src={drd} />
+        </div>
+      </SpikeSection>
+      <SpikeSection modifiers={["orange", "left"]}>
+        <div>
+          <img src={kentucky} />
+        </div>
+        <SpikeSectionBox>
+          <h2>Kentucky Chrome</h2>
+          <h4>Friday 8:30pm - MIDNIGHT</h4>
+          <br />
+          <ButtonHTMLLink
+            href="https://www.facebook.com/kentuckychromeband/"
+            target="_blank"
+            modifiers={["borderOrange"]}
+          >
+            Like On Facebook
+          </ButtonHTMLLink>
+        </SpikeSectionBox>
+      </SpikeSection>
+    </Section>
+
+    <Section>
+      <h2>MaumeePalooza - Saturday Afternoon</h2>
+
+      <SpikeSection modifiers={["blue", "right"]}>
+        <SpikeSectionBox>
+          <h2>The Cinnamon, Larry Ensemble </h2>
+          <h4>EMCEE</h4>
+          <p>
+            Andrew Stanton &amp; Don Gormanly are The Cinnamon, Larry Ensemble.
+            The purpose of The Cinnamon, Larry Ensemble is simple: to rock your
+            face off.
+            <br />
+            <br />
+            Born right here in Maumee, Ohio as the "in between" entertainment
+            for the scheduled bands. Nothing but fun happens The Cinnamon, Larry
+            Ensemble!
+          </p>
+          <br />
+          <ButtonHTMLLink
+            href="https://www.facebook.com/cinnamonlarryensemble/"
+            target="_blank"
+            modifiers={["borderBlue"]}
+          >
+            Like On Facebook
+          </ButtonHTMLLink>
+        </SpikeSectionBox>
+      </SpikeSection>
+
+      <SpikeSection modifiers={["orange", "left"]}>
+        <SpikeSectionBox>
+          <h2>Maumee Community Band</h2>
+          <h4>Saturday 10:30am - 12:00pm</h4>
+        </SpikeSectionBox>
+      </SpikeSection>
+
+      <SpikeSection modifiers={["blue", "right"]}>
+        <SpikeSectionBox>
+          <h2>The Shakin' Shivers</h2>
+          <h4>Saturday 12:30 - 1:10pm</h4>
+          <br />
+          <ButtonHTMLLink
+            href="https://www.facebook.com/theshakinshivers/"
+            target="_blank"
+            modifiers={["borderBlue"]}
+          >
+            Like On Facebook
+          </ButtonHTMLLink>
+        </SpikeSectionBox>
+        <div>
+          <img src={shakin} />
+        </div>
+      </SpikeSection>
+
+      <SpikeSection modifiers={["orange", "left"]}>
+        <div>
+          <img src={hayden} />
+        </div>
+        <SpikeSectionBox>
+          <h2>JT Hayden</h2>
+          <h4>Saturday 1:25pm - 2:05pm</h4>
+          <br />
+          <ButtonHTMLLink
+            href="https://www.facebook.com/jthaydenband/"
+            target="_blank"
+            modifiers={["borderOrange"]}
+          >
+            Like On Facebook
+          </ButtonHTMLLink>
+        </SpikeSectionBox>
+      </SpikeSection>
+
+      <SpikeSection modifiers={["blue", "right"]}>
+        <SpikeSectionBox>
+          <h2>Dirty Lies</h2>
+          <h4>Saturday 2:20pm - 3:00pm</h4>
+          <p>
+            We are 3 musicians whose friendship and passion for music has lasted
+            more than 40 years.
+            <br />
+            <br />
+            We are a solid rock band with a professional sound and entertaining
+            stage presence that plays a blend of award winning originals and
+            seldom heard covers.
+            <br />
+            <br />
+            Come rock with the band!
+            <br />
+            <ButtonHTMLLink
+              href="https://www.facebook.com/kidzb4/"
+              target="_blank"
+              modifiers={["borderBlue"]}
+            >
+              Like On Facebook
+            </ButtonHTMLLink>
+          </p>
+        </SpikeSectionBox>
+        <div>
+          <img src={dlies} />
+        </div>
+      </SpikeSection>
+
+      <SpikeSection modifiers={["orange", "left"]}>
+        <div>
+          <img src={isuns} />
+        </div>
         <SpikeSectionBox>
           <h2>Identical Suns</h2>
           <h4>Saturday 3:15pm - 4:00pm</h4>
@@ -196,92 +342,38 @@ const MusicPage = () => (
           <ButtonHTMLLink
             href="http://identicalsuns.com"
             target="_blank"
-            modifiers={["borderBlue"]}
+            modifiers={["borderOrange"]}
           >
             Visit Website
           </ButtonHTMLLink>
         </SpikeSectionBox>
-        <div>
-          <img src={isuns} />
-        </div>
       </SpikeSection>
-      <SpikeSection modifiers={["orange", "left"]}>
-        <div>
-          <img src={dlies} />
-        </div>
-        <SpikeSectionBox>
-          <h2>Dirty Lies</h2>
-          <h4>Saturday 2:20pm - 3:00pm</h4>
-          <p>
-            We are 3 musicians whose friendship and passion for music has lasted
-            more than 40 years.
-            <br />
-            <br />
-            We are a solid rock band with a professional sound and entertaining
-            stage presence that plays a blend of award winning originals and
-            seldom heard covers.
-            <br />
-            <br />
-            Come rock with the band!
-          </p>
-        </SpikeSectionBox>
-      </SpikeSection>
+    </Section>
+
+    <Section modifiers="light">
+      <h2>Parking Lot Party - Saturday Night</h2>
       <SpikeSection modifiers={["blue", "right"]}>
         <SpikeSectionBox>
-          <h2>JT Hayden</h2>
-          <h4>Saturday 1:25pm - 2:05pm</h4>
-        </SpikeSectionBox>
-      </SpikeSection>
-      <SpikeSection modifiers={["orange", "left"]}>
-        <SpikeSectionBox>
-          <h2>The Shakin' Shivers</h2>
-          <h4>Saturday 12:30 - 1:10pm</h4>
-        </SpikeSectionBox>
-      </SpikeSection>
-      <SpikeSection modifiers={["blue", "right"]}>
-        <SpikeSectionBox>
-          <h2>Maumee Community Band</h2>
-          <h4>Saturday 10:30am - 12:00pm</h4>
-        </SpikeSectionBox>
-      </SpikeSection>
-      <SpikeSection modifiers={["orange", "left"]}>
-        <SpikeSectionBox>
-          <h2>In Between Spaces</h2>
-          <h4>EMCEE</h4>
-          <p>
-            Andrew Stanton &amp; Don Gormanly are In Between Spaces. The purpose
-            of In Between Spaces is simple: to rock your face off.
-            <br />
-            <br />
-            Born right here in Maumee, Ohio as the "in between" entertainment
-            for the scheduled bands. Nothing but fun happens In Between Spaces!
-          </p>
+          <h2>Chris Shutters Band</h2>
+          <h4>Saturday 5:00pm - 7:00pm</h4>
           <br />
           <ButtonHTMLLink
-            href="https://www.facebook.com/inbetweenspacestheband/"
+            href="https://www.facebook.com/ChrisShuttersFanPage/"
             target="_blank"
-            modifiers={["borderOrange"]}
+            modifiers={["borderBlue"]}
           >
             Like On Facebook
           </ButtonHTMLLink>
         </SpikeSectionBox>
+        <div>
+          <img src={shutters} />
+        </div>
       </SpikeSection>
-    </Section>
-    <Section>
-      <h2>Parking Lot Party Bands</h2>
-      <SpikeSection modifiers={["blue", "right"]}>
-        <SpikeSectionBox>
-          <h2>Kentucky Chrome</h2>
-          <h4>Friday 8:30pm - MIDNIGHT</h4>
-        </SpikeSectionBox>
-      </SpikeSection>
+
       <SpikeSection modifiers={["orange", "left"]}>
-        <SpikeSectionBox>
-          <h2>Down River Dan</h2>
-          <h4>5:00pm - 8:00pm</h4>
-        </SpikeSectionBox>
-      </SpikeSection>
-      <SpikeSection modifiers={["blue", "right"]}>
+        <div>
+          <img src={reg} />
+        </div>
         <SpikeSectionBox>
           <h2>Reaganomics</h2>
           <h4>Saturday 8:30pm - MIDNIGHT</h4>
@@ -305,19 +397,10 @@ const MusicPage = () => (
           <ButtonHTMLLink
             href="http://www.reaganomics.com"
             target="_blank"
-            modifiers="borderBlue"
+            modifiers="borderOrange"
           >
             Visit Website
           </ButtonHTMLLink>
-        </SpikeSectionBox>
-        <div>
-          <img src={reg} />
-        </div>
-      </SpikeSection>
-      <SpikeSection modifiers={["orange", "left"]}>
-        <SpikeSectionBox>
-          <h2>Chris Shutters Band</h2>
-          <h4>Saturday 5:00pm - 7:00pm</h4>
         </SpikeSectionBox>
       </SpikeSection>
     </Section>

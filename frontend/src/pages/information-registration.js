@@ -22,7 +22,7 @@ const LinkGrid = styled.div`
 
 const InfoRegistrationPage = () => (
   <Layout>
-    <SEO title="Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
+    <SEO title="Information & Registration - Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
     <InnerBanner image={banner}>
       <h2>Information / Registration</h2>
     </InnerBanner>

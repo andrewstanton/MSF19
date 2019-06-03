@@ -22,7 +22,7 @@ import parade from "../images/activities/parade.jpg"
 
 const ActivitiesPage = () => (
   <Layout>
-    <SEO title="Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
+    <SEO title="Activities - Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
     <InnerBanner image={banner}>
       <h2>Activities</h2>
     </InnerBanner>
@@ -69,19 +69,13 @@ const ActivitiesLayout = () => {
         <SpikeSectionBox>
           <h2>BMX DEMONSTRATION</h2>
           <h4>The Right Direction</h4>
-          <em>Saturday 10am-3pm</em>
+          <em>Saturday 1pm & 3pm</em>
           <br />
           <br />
           <p>
-            $8.00 pre-register, $10.00 day of the show.
-            <br />
-            Dash Plaques first 100 cars.
-            <br />
-            <strong>Car Show is organized by:</strong>
-            <br />
-            Maumee Masonic Complex &amp; Royal Arch Masons of Ohio, District 8
-            <br />
-            Enter Off West Wayne / Cass Street
+          A lot of us grew up with the opportunity to engage in action sports. We mountain biked, skateboarded, rode BMX, and inline skated. But few, if any, received support that led them to achieve professional status or the ability to make a living working within in those fields. Enter The Right Direction.
+          <br/>
+          100 Block of East Dudley Street
           </p>
         </SpikeSectionBox>
       </SpikeSection>
