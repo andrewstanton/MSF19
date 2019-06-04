@@ -315,28 +315,32 @@ const MusicPage = () => (
           <h2>Identical Suns</h2>
           <h4>Saturday 3:15pm - 4:00pm</h4>
           <p>
-            Identical Suns is an act consisting of members from the states of
-            California and Ohio. This band consists of many years of musical
-            experience ranging from rock to classical music. Identicals Suns
-            original music has played on various radio stations through out the
-            United States.
+            Identical Suns is an act consisting of members from California and
+            Ohio. This band consists of many years of musical experience ranging
+            from rock to classical music.
             <br />
             <br />
-            They recently released their self-titled debut on cd (available on
-            all the streaming and download services as well) and are currently
-            writing & recording their follow-up. The only rule to the creation
-            of the music is that there are no rules. Each song is an entity of
-            it's own, and has no regard to any genre.
+            In 2015, the band released their self-titled debut on CD The only
+            rule to the creation of the music is that there are no rules. Each
+            song is an entity of it's own, and has no regard to any genre.
             <br />
             <br />
-            There is another album currently in the works.
+            Identical Suns released their follow up album just this year (2019)
+            entitled "WEEK MINDED" and has an impressive 14 brand new original
+            songs. They are excited to play some of those new songs this year on
+            the MaumeePalooza stage.
             <br />
             <br />
-            This is the fifth year that Identical Suns have played the
+            Identical Suns original music has played on various internet and
+            radio stations through out the United States and a few other
+            countries. Their music is available on all the streaming and
+            download services.
+            <br />
+            <br />
+            This is the 6th year that Identical Suns have played the
             MaumeePalooza stage. In addition to their appearances in Ohio, they
             have appeared in California and have also played on Stage-It, a live
-            performance website. Identical Suns is excited to present their new
-            songs and old favorites to their hometown fans.
+            performance website.
           </p>
           <br />
           <ButtonHTMLLink
@@ -356,6 +360,25 @@ const MusicPage = () => (
         <SpikeSectionBox>
           <h2>Chris Shutters Band</h2>
           <h4>Saturday 5:00pm - 7:00pm</h4>
+          <p>
+            2-time BSBS National Blues Champion, Songwriter and Producer, Chris
+            Shutters (33). Tours internationally with 7 world tours under his
+            belt. He has two albums, ‘A World Apart’ (2009) and ‘Laugh and Roll
+            the Moon’ (2013). Shutters is currently working on his 3rd and 4th
+            albums. He released a live album with his band, November 2017. It’s
+            called, ‘Live at Howard’s’ in Bowling Green, OH. Soon he will
+            release his first blues album with collaborations with Chicago blues
+            legend, Jimmy Burns. He will also release an album with Corky Laing
+            from ‘Mountain’ this year. Shutters is also expected to release a
+            collaborative album with Kofi Baker, son of Ginger Baker from
+            ‘Cream’.
+            <br />
+            <br />
+            Shutters was awarded ‘Best Artist’ in three different cities in the
+            US. Four times in Toledo, OH, once in Chicago, IL (2010 and was
+            nominated for a second in 2012) and Austin, TX (2013). He is
+            currently working on another US tour along with his 8th world tour.
+          </p>
           <br />
           <ButtonHTMLLink
             href="https://www.facebook.com/ChrisShuttersFanPage/"
