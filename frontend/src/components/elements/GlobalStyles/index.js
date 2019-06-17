@@ -498,7 +498,7 @@ export const GlobalStyles = createGlobalStyle`
           ${Media.below.tablet`
   
             h1 {
-            font-size: 42px;
+            font-size: 30px;
             }
             h3 {
             font-size: 24px;
