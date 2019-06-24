@@ -174,6 +174,12 @@ const MusicPage = () => (
         <SpikeSectionBox>
           <h2>Down River Dan</h2>
           <h4>5:00pm - 8:00pm</h4>
+          <p>
+            With his electrified blues and rock music Dan has been entertaining
+            crowds and performing everywhere from bars and restaurants, to
+            street fairs and summer festivals since playing his first open mic
+            night at age 16.
+          </p>
           <br />
           <ButtonHTMLLink
             href="https://www.facebook.com/1DownRiverDan/"
@@ -194,6 +200,10 @@ const MusicPage = () => (
         <SpikeSectionBox>
           <h2>Kentucky Chrome</h2>
           <h4>Friday 8:30pm - MIDNIGHT</h4>
+          <p>
+            Music for everyone! Rock and roll, rockabilly, old school country,
+            and honky tonk from the Rust Belt, USA.
+          </p>
           <br />
           <ButtonHTMLLink
             href="https://www.facebook.com/kentuckychromeband/"
@@ -214,14 +224,9 @@ const MusicPage = () => (
           <h2>The Cinnamon, Larry Ensemble </h2>
           <h4>EMCEE</h4>
           <p>
-            Andrew Stanton &amp; Don Gormanly are The Cinnamon, Larry Ensemble.
-            The purpose of The Cinnamon, Larry Ensemble is simple: to rock your
-            face off.
+            The master of ceremonies hosting this year's MaumeePalooza stage.
             <br />
-            <br />
-            Born right here in Maumee, Ohio as the "in between" entertainment
-            for the scheduled bands. Nothing but fun happens The Cinnamon, Larry
-            Ensemble!
+            The name says it all.
           </p>
           <br />
           <ButtonHTMLLink
@@ -238,6 +243,20 @@ const MusicPage = () => (
         <SpikeSectionBox>
           <h2>Maumee Community Band</h2>
           <h4>Saturday 10:30am - 12:00pm</h4>
+          <p>
+            The Maumee Community Band, supported and sanctioned by the{" "}
+            <a href="http://www.maumee.org" target="_blank">
+              City of Maumee
+            </a>
+            , is dedicated to making a positive contribution to the musical
+            environment of the area it serves. Utilizing the skill and talents
+            of an all-volunteer membership, the Maumee Community Band seeks to
+            provide an opportunity for individual musical expression, enjoyment,
+            and growth among its members; to provide an opportunity for contact
+            among area musicians; to enrich the activities of the community it
+            serves; and to reconfirm the position of the community concert band
+            in American music.
+          </p>
         </SpikeSectionBox>
       </SpikeSection>
 
@@ -245,6 +264,12 @@ const MusicPage = () => (
         <SpikeSectionBox>
           <h2>The Shakin' Shivers</h2>
           <h4>Saturday 12:30 - 1:10pm</h4>
+          <p>
+            A Blues/Rock Duo from the Toledo, Ohio area. Everything they play
+            has been co-written by both members of the band. Every last bit of
+            their music is completely based on feelings and vibes. They have set
+            no musical boundaries for themselves. They just play what they feel.
+          </p>
           <br />
           <ButtonHTMLLink
             href="https://www.facebook.com/theshakinshivers/"
@@ -266,9 +291,16 @@ const MusicPage = () => (
         <SpikeSectionBox>
           <h2>JT Hayden</h2>
           <h4>Saturday 1:25pm - 2:05pm</h4>
+          <p>
+            J.T Hayden is a multi talented singer/songwriter who has been
+            playing music ever since the age of six. He has written a wide
+            selection of songs with styles ranging from pop/country, to pop/rock
+            & alternative rock. His original music was produced by the artist
+            himself.
+          </p>
           <br />
           <ButtonHTMLLink
-            href="https://www.facebook.com/jthaydenband/"
+            href="https://www.facebook.com/thejthaydenproject/"
             target="_blank"
             modifiers={["borderOrange"]}
           >
