@@ -136,7 +136,7 @@ const FoodVendors = () => (
 
 const FoodPage = () => (
   <Layout>
-    <SEO title="Taste Of Maumee Food - Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
+    <SEO title="Taste Of Maumee Food - Maumee Summer Fair | Celebrate Summer Fun With Us!" />
     <InnerBanner image={banner} height="400px">
       <FoodBannerWrapper>
         <img src={badge} />

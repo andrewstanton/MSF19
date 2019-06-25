@@ -10,7 +10,7 @@ import parade from "../images/activities/parade.jpg"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
+    <SEO title="Maumee Summer Fair | Celebrate Summer Fun With Us!" />
     <HomeBanner />
     <Section>
       <Flex>

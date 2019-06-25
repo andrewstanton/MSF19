@@ -9,7 +9,7 @@ import banner from "../images/banners/fair.png"
 
 const ThankYouPage = () => (
   <Layout>
-    <SEO title="Thank You For Registering - Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
+    <SEO title="Thank You For Registering - Maumee Summer Fair | Celebrate Summer Fun With Us!" />
     <InnerBanner image={banner}>
       <h2>Thank You!</h2>
     </InnerBanner>

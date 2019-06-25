@@ -72,7 +72,7 @@ const PaddingCol = styled(Col)`
 
 const MusicPage = () => (
   <Layout>
-    <SEO title="Parking Lot Party & MaumeePalooza - Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
+    <SEO title="Parking Lot Party & MaumeePalooza - Maumee Summer Fair | Celebrate Summer Fun With Us!" />
     <InnerBanner image={banner}>
       <h2>MSF Music</h2>
     </InnerBanner>

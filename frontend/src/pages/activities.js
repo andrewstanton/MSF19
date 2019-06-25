@@ -22,7 +22,7 @@ import parade from "../images/activities/parade.jpg"
 
 const ActivitiesPage = () => (
   <Layout>
-    <SEO title="Activities - Maumee Summer Fair | Celebrate 41 Years Of Summer Fun With Us!" />
+    <SEO title="Activities - Maumee Summer Fair | Celebrate Summer Fun With Us!" />
     <InnerBanner image={banner}>
       <h2>Activities</h2>
     </InnerBanner>
