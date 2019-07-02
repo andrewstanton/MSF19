@@ -1,6 +1,6 @@
 [
   {
-    "name": "Treu House Of Munch",
+    "name": "Yuingling",
     "img": "treu.jpg",
     "background": "#fbad30",
     "url": "http://www.treuhouse.com/"
@@ -12,22 +12,16 @@
     "url": "https://www.stlukeshospital.com/"
   },
   {
-    "name": "KeyBank",
-    "img": "keybank.jpg",
+    "name": "Resolute Bank",
+    "img": "resolution.jpg",
     "background": "white",
-    "url": "https://www.key.com/personal/index.jsp"
+    "url": "https://www.resolutefsb.com/"
   },
   {
-    "name": "The Andersons",
-    "img": "andersons.jpg",
-    "background": "black",
-    "url": "https://andersonsinc.com/"
-  },
-  {
-    "name": "Savage McVicker",
-    "img": "savage.jpg",
-    "background": "#16315b",
-    "url": "https://www.savagemcvicker.com/"
+    "name": "Meijer",
+    "img": "meijer.jpg",
+    "background": "white",
+    "url": "https://www.meijer.com/shop/en/store/115/?cmpid=OLA:040319:GoogleGrocery"
   },
   {
     "name": "Elizabeth Scott Community",
@@ -36,22 +30,22 @@
     "url": "http://www.elizabethscott.org/"
   },
   {
-    "name": "Dales Bar and Grill",
-    "img": "dales.jpg",
-    "background": "white",
-    "url": "http://www.dalesbarandgrill.com/"
-  },
-  {
-    "name": "The Village Idiot",
-    "img": "vi.jpg",
-    "background": "#615e53",
-    "url": "https://www.villageidiotmaumee.com/"
-  },
-  {
     "name": "Buckeye Broadband",
     "img": "buck.jpg",
     "background": "white",
     "url": "https://www.buckeyebroadband.com/"
+  },
+  {
+    "name": "The Andersons",
+    "img": "andersons.jpg",
+    "background": "black",
+    "url": "https://andersonsinc.com/"
+  },
+  {
+    "name": "Dales Bar and Grill",
+    "img": "dales.jpg",
+    "background": "white",
+    "url": "http://www.dalesbarandgrill.com/"
   },
   {
     "name": "Brondes",
@@ -59,18 +53,28 @@
     "background": "white",
     "url": "https://www.brondesfordmaumee.com/"
   },
+
   {
-    "name": "Resolute Bank",
-    "img": "resolution.jpg",
+    "name": "KeyBank",
+    "img": "keybank.jpg",
     "background": "white",
-    "url": "https://www.resolutefsb.com/"
+    "url": "https://www.key.com/personal/index.jsp"
   },
+
   {
-    "name": "Western & Southern Life",
-    "img": "westernAndSouthern-1-1.jpg",
-    "background": "white",
-    "url": "https://www.westernsouthern.com/wslife"
+    "name": "Savage McVicker",
+    "img": "savage.jpg",
+    "background": "#16315b",
+    "url": "https://www.savagemcvicker.com/"
   },
+
+  {
+    "name": "The Village Idiot",
+    "img": "vi.jpg",
+    "background": "#615e53",
+    "url": "https://www.villageidiotmaumee.com/"
+  },
+
   {
     "name": "Dibling Floor Covering",
     "img": "dibling.jpg",
