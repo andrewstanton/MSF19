@@ -58,13 +58,13 @@ const ActivitiesLayout = () => {
           </p>
         </SpikeSectionBox>
         <div>
-          <img src={carshow} />
+          <img src={carshow} alt={``} />
         </div>
       </SpikeSection>
 
       <SpikeSection modifiers={["blue", "left"]}>
         <div>
-          <img src={bike} />
+          <img src={bike} alt={``} />
         </div>
         <SpikeSectionBox>
           <h2>BMX DEMONSTRATION</h2>
@@ -73,9 +73,13 @@ const ActivitiesLayout = () => {
           <br />
           <br />
           <p>
-          A lot of us grew up with the opportunity to engage in action sports. We mountain biked, skateboarded, rode BMX, and inline skated. But few, if any, received support that led them to achieve professional status or the ability to make a living working within in those fields. Enter The Right Direction.
-          <br/>
-          100 Block of East Dudley Street
+            A lot of us grew up with the opportunity to engage in action sports.
+            We mountain biked, skateboarded, rode BMX, and inline skated. But
+            few, if any, received support that led them to achieve professional
+            status or the ability to make a living working within in those
+            fields. Enter The Right Direction.
+            <br />
+            100 Block of East Dudley Street
           </p>
         </SpikeSectionBox>
       </SpikeSection>
@@ -96,13 +100,13 @@ const ActivitiesLayout = () => {
           </p>
         </SpikeSectionBox>
         <div>
-          <img src={kidzone} />
+          <img src={kidzone} alt={``} />
         </div>
       </SpikeSection>
 
       <SpikeSection modifiers={["blue", "left"]}>
         <div>
-          <img src={iceinice} className="no-circle" />
+          <img src={iceinice} className="no-circle" alt={``} />
         </div>
         <SpikeSectionBox>
           <h2>Ice In The Ice Contest!</h2>
@@ -146,13 +150,13 @@ const ActivitiesLayout = () => {
           </p>
         </SpikeSectionBox>
         <div>
-          <img src={beer} />
+          <img src={beer} alt={``} />
         </div>
       </SpikeSection>
 
       <SpikeSection modifiers={["blue", "left"]}>
         <div>
-          <img src={parade} />
+          <img src={parade} alt={``} />
         </div>
         <SpikeSectionBox>
           <h2>Maumee Summer Fair Parade</h2>

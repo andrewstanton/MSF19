@@ -18,21 +18,22 @@ const IndexPage = () => (
           <h2>2018 Summer Fair Commerical</h2>
           <Embed>
             <iframe
+              title="maumeeSummerFair"
               src="https://www.youtube.com/embed/dcvOBHy11vA"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             />
           </Embed>
         </Col>
         <div className="marginTextCol">
           <p>
-            The annual <Link>Maumee Summer Fair</Link> is held each August on
-            beautifully tree-lined streets in the historic uptown district of
-            Maumee, Ohio. In addition to 150 arts &amp; crafts booths, we have a
-            popular Kid’s Zone featuring bounce houses and inflatables,
-            caricature artist and face painting, a classic car show, and family
-            entertainment throughout the day on Saturday.
+            The annual <Link to="/">Maumee Summer Fair</Link> is held each
+            August on beautifully tree-lined streets in the historic uptown
+            district of Maumee, Ohio. In addition to 150 arts &amp; crafts
+            booths, we have a popular Kid’s Zone featuring bounce houses and
+            inflatables, caricature artist and face painting, a classic car
+            show, and family entertainment throughout the day on Saturday.
             <br />
             <br />
             On Friday &amp; Saturday evening we have regional bands rocking the
@@ -46,7 +47,7 @@ const IndexPage = () => (
     <Section modifiers="light">
       <div className="paradeSection">
         <div>
-          <img src={parade} />
+          <img src={parade} alt={``} />
         </div>
         <div className="info">
           <h2>2019 Parade - Come One, Come All - Circus</h2>

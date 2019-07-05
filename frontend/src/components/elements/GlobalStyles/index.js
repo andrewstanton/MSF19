@@ -1,5 +1,5 @@
 import { createGlobalStyle, keyframes } from "styled-components"
-import { normalize, lighten, darken, hsl } from "polished"
+import { normalize, hsl } from "polished"
 
 import { Color, Type, Media } from "../../utilities"
 

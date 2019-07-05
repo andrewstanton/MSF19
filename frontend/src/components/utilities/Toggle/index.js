@@ -1,6 +1,6 @@
-import React, { Component } from "react"
+import React from "react"
 
-export class Toggle extends Component {
+export class Toggle extends React.Component {
   state = {
     on: false,
   }

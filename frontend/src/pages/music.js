@@ -184,18 +184,19 @@ const MusicPage = () => (
           <ButtonHTMLLink
             href="https://www.facebook.com/1DownRiverDan/"
             target="_blank"
+            rel="noopener noreferrer"
             modifiers={["borderBlue"]}
           >
             Like On Facebook
           </ButtonHTMLLink>
         </SpikeSectionBox>
         <div>
-          <img src={drd} />
+          <img src={drd} alt={``} />
         </div>
       </SpikeSection>
       <SpikeSection modifiers={["orange", "left"]}>
         <div>
-          <img src={kentucky} />
+          <img src={kentucky} alt={``} />
         </div>
         <SpikeSectionBox>
           <h2>Kentucky Chrome</h2>
@@ -208,6 +209,7 @@ const MusicPage = () => (
           <ButtonHTMLLink
             href="https://www.facebook.com/kentuckychromeband/"
             target="_blank"
+            rel="noopener noreferrer"
             modifiers={["borderOrange"]}
           >
             Like On Facebook
@@ -232,6 +234,7 @@ const MusicPage = () => (
           <ButtonHTMLLink
             href="https://www.facebook.com/cinnamonlarryensemble/"
             target="_blank"
+            rel="noopener noreferrer"
             modifiers={["borderBlue"]}
           >
             Like On Facebook
@@ -245,7 +248,11 @@ const MusicPage = () => (
           <h4>Saturday 10:30am - 12:00pm</h4>
           <p>
             The Maumee Community Band, supported and sanctioned by the{" "}
-            <a href="http://www.maumee.org" target="_blank">
+            <a
+              href="http://www.maumee.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               City of Maumee
             </a>
             , is dedicated to making a positive contribution to the musical
@@ -274,19 +281,20 @@ const MusicPage = () => (
           <ButtonHTMLLink
             href="https://www.facebook.com/theshakinshivers/"
             target="_blank"
+            rel="noopener noreferrer"
             modifiers={["borderBlue"]}
           >
             Like On Facebook
           </ButtonHTMLLink>
         </SpikeSectionBox>
         <div>
-          <img src={shakin} />
+          <img src={shakin} alt={``} />
         </div>
       </SpikeSection>
 
       <SpikeSection modifiers={["orange", "left"]}>
         <div>
-          <img src={hayden} />
+          <img src={hayden} alt={``} />
         </div>
         <SpikeSectionBox>
           <h2>JT Hayden</h2>
@@ -302,6 +310,7 @@ const MusicPage = () => (
           <ButtonHTMLLink
             href="https://www.facebook.com/thejthaydenproject/"
             target="_blank"
+            rel="noopener noreferrer"
             modifiers={["borderOrange"]}
           >
             Like On Facebook
@@ -328,6 +337,7 @@ const MusicPage = () => (
             <ButtonHTMLLink
               href="https://www.facebook.com/kidzb4/"
               target="_blank"
+              rel="noopener noreferrer"
               modifiers={["borderBlue"]}
             >
               Like On Facebook
@@ -335,13 +345,13 @@ const MusicPage = () => (
           </p>
         </SpikeSectionBox>
         <div>
-          <img src={dlies} />
+          <img src={dlies} alt={``} />
         </div>
       </SpikeSection>
 
       <SpikeSection modifiers={["orange", "left"]}>
         <div>
-          <img src={isuns} />
+          <img src={isuns} alt={``} />
         </div>
         <SpikeSectionBox>
           <h2>Identical Suns</h2>
@@ -378,6 +388,7 @@ const MusicPage = () => (
           <ButtonHTMLLink
             href="http://identicalsuns.com"
             target="_blank"
+            rel="noopener noreferrer"
             modifiers={["borderOrange"]}
           >
             Visit Website
@@ -415,19 +426,20 @@ const MusicPage = () => (
           <ButtonHTMLLink
             href="https://www.facebook.com/ChrisShuttersFanPage/"
             target="_blank"
+            rel="noopener noreferrer"
             modifiers={["borderBlue"]}
           >
             Like On Facebook
           </ButtonHTMLLink>
         </SpikeSectionBox>
         <div>
-          <img src={shutters} />
+          <img src={shutters} alt={``} />
         </div>
       </SpikeSection>
 
       <SpikeSection modifiers={["orange", "left"]}>
         <div>
-          <img src={reg} />
+          <img src={reg} alt={``} />
         </div>
         <SpikeSectionBox>
           <h2>Reaganomics</h2>
@@ -452,6 +464,7 @@ const MusicPage = () => (
           <ButtonHTMLLink
             href="http://www.reaganomics.com"
             target="_blank"
+            rel="noopener noreferrer"
             modifiers="borderOrange"
           >
             Visit Website

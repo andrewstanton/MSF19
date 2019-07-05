@@ -97,13 +97,21 @@ const Footer = ({ siteMetadata = {}, sponsors = {}, images = {} }) => {
             <StyledHeading>Maumee Summer Fair</StyledHeading>
             <div>
               Hosted By{" "}
-              <a href="https://www.maumeeuptown.com" target="_blank">
+              <a
+                href="https://www.maumeeuptown.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Maumee Uptown Business Association
               </a>
             </div>
             <div>
               Website By{" "}
-              <a href="http://toddprod.com" target="_blank">
+              <a
+                href="http://toddprod.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Todd Productions Inc.
               </a>
             </div>
@@ -130,6 +138,7 @@ const Footer = ({ siteMetadata = {}, sponsors = {}, images = {} }) => {
                   img={img.node.publicURL}
                   background={sponsor.node.background}
                   href={sponsor.node.url}
+                  rel="noopener noreferrer"
                   target="_blank"
                 />
               )

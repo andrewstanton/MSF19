@@ -64,20 +64,20 @@ export const HomeBanner = ({ children, ...props }) => (
     <div className="looseBalloon looseBalloon--1" />
     <div className="looseBalloon looseBalloon--2" />
     <div className="looseBalloon looseBalloon--3" />
-    <img src={city} className="city" />
-    <img src={grass} className="grass" />
-    <img src={balloons} className="balloons balloons--1" />
-    <img src={balloons} className="balloons  balloons--2" />
-    <img src={balloons} className="balloons  balloons--3" />
-    <img src={cloud1} className="cloud cloud--1" />
-    <img src={cloud2} className="cloud cloud--2" />
-    <img src={cloud3} className="cloud cloud--3" />
-    <img src={cloud1} className="cloud cloud--5" />
-    <img src={cloud2} className="cloud cloud--6" />
-    <img src={cloud3} className="cloud cloud--7" />
-    <img src={car1} className="car car--1" />
-    <img src={car2} className="car car--2" />
-    <img src={car3} className="car car--3" />
+    <img src={city} className="city" alt={``} />
+    <img src={grass} className="grass" alt={``} />
+    <img src={balloons} className="balloons balloons--1" alt={``} />
+    <img src={balloons} className="balloons  balloons--2" alt={``} />
+    <img src={balloons} className="balloons  balloons--3" alt={``} />
+    <img src={cloud1} className="cloud cloud--1" alt={``} />
+    <img src={cloud2} className="cloud cloud--2" alt={``} />
+    <img src={cloud3} className="cloud cloud--3" alt={``} />
+    <img src={cloud1} className="cloud cloud--5" alt={``} />
+    <img src={cloud2} className="cloud cloud--6" alt={``} />
+    <img src={cloud3} className="cloud cloud--7" alt={``} />
+    <img src={car1} className="car car--1" alt={``} />
+    <img src={car2} className="car car--2" alt={``} />
+    <img src={car3} className="car car--3" alt={``} />
   </StyledHomeBanner>
 )
 

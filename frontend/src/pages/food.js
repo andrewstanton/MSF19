@@ -121,6 +121,7 @@ const FoodVendors = () => (
                 <VendorCol href={vendor.node.url} target="_blank" key={ix}>
                   <VendorImg
                     image={img.node.publicURL}
+                    alt={``}
                     background={vendor.node.background}
                   />
                   {vendor.node.name}
@@ -139,7 +140,7 @@ const FoodPage = () => (
     <SEO title="Taste Of Maumee Food - Maumee Summer Fair | Celebrate Summer Fun With Us!" />
     <InnerBanner image={banner} height="400px">
       <FoodBannerWrapper>
-        <img src={badge} />
+        <img src={badge} alt={``} />
         <h2>Taste Of Maumee</h2>
       </FoodBannerWrapper>
     </InnerBanner>
