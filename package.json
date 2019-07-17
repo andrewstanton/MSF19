@@ -9,7 +9,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.8.2",
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "babel-plugin-styled-components": "^1.10.1",
+    "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.3.27",
     "gatsby-cli": "^2.7.2",
     "gatsby-image": "^2.0.39",
@@ -17,7 +17,7 @@
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sharp": "^2.0.35",
-    "gatsby-plugin-styled-components": "^3.1.0",
+    "gatsby-plugin-styled-components": "^3.1.2",
     "gatsby-source-filesystem": "^2.0.37",
     "gatsby-transformer-json": "^2.1.11",
     "gatsby-transformer-remark": "^2.3.12",
@@ -32,6 +32,8 @@
     "styled-components-modifiers": "^1.1.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "babel-preset-gatsby": "^0.2.6",
     "prettier": "^1.17.0"
   },
   "keywords": [
