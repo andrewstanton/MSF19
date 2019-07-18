@@ -53,6 +53,13 @@ const MODIFIER_CONFIG = {
     border: 1px solid ${Color.orange};
   `,
 
+  small: () => css`
+    font-size: 0.9rem;
+    padding: 0.8rem 0.5rem;
+    display: block;
+    width: auto;
+  `,
+
   large: () => css`
     font-size: 2rem;
     padding: 2rem 2.5rem;
