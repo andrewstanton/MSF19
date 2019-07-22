@@ -52,7 +52,11 @@ const ActivitiesLayout = () => {
             Enter Off West Wayne / Cass Street
             <br />
             <br />
-            <ButtonHTMLLink modifiers="borderOrange">
+            <ButtonHTMLLink
+              modifiers="borderOrange"
+              href="https://maumeesummerfair.com/pdfs/2019-car-show.pdf"
+              target="_blank"
+            >
               Car Show Application Here
             </ButtonHTMLLink>
           </p>
