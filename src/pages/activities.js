@@ -175,7 +175,11 @@ const ActivitiesLayout = () => {
             Fair parade participate form
           </p>
           <br />
-          <ButtonHTMLLink modifiers="borderBlue">
+          <ButtonHTMLLink
+            modifiers="borderBlue"
+            target="_blank"
+            href="https://maumeesummerfair.com/pdfs/2019-parade.pdf"
+          >
             Parade Participant Form
           </ButtonHTMLLink>
         </SpikeSectionBox>
