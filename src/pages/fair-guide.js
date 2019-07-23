@@ -29,7 +29,11 @@ const FairGuidePage = () => (
     <Section modifiers="light">
       <h2>MSF 2019 Map</h2>
       <AlignCenter>
-        <a href="" target="_blank" rel="noopener nofollow">
+        <a
+          href="https://maumeesummerfair.com/pdfs/2019-map.pdf"
+          target="_blank"
+          rel="noopener nofollow"
+        >
           Link To Detailed Map
         </a>
       </AlignCenter>
