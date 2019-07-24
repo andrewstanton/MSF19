@@ -9,7 +9,7 @@ module.exports = {
       },
       end: {
         date: "08/10/2019",
-        time: "5pm - 12am",
+        time: "9am - 12am",
       },
     },
     nav: [
