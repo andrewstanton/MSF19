@@ -1,11 +1,12 @@
 import React from "react"
 import styled from "styled-components"
+import { darken } from "polished"
 import { StaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layouts/Layout"
 
 import { InnerBanner, Section, ButtonHTMLLink } from "../components/elements"
-import { SEO, Media } from "../components/utilities"
+import { SEO, Media, Color, Type } from "../components/utilities"
 
 import banner from "../images/banners/fair.png"
 
@@ -18,6 +19,22 @@ const LinkGrid = styled.div`
   ${Media.below.tablet`
     grid-template-columns: 1fr;
   `}
+`
+
+const Alert = styled.div`
+  padding: 1.5rem;
+  text-align: center;
+  background: ${Color.orange};
+  border: 5px solid ${darken(0.3, Color.orange)};
+  border-radius: 5px;
+  color: ${Color.white};
+  margin-top: 2rem;
+  font-family: ${Type.header};
+  font-size: 1.5rem;
+
+  a {
+    color: ${darken(0.3, Color.orange)};
+  }
 `
 
 const InfoRegistrationPage = () => (
@@ -39,6 +56,15 @@ const InfoRegistrationPage = () => (
         <br />
         Emergency contact only: <strong>Mike Dibling</strong> 419-345-4500
       </p>
+      <Alert>
+        UPDATE: Vendor Booth Applications From 07/26 Are Based On Availability.
+        <br />
+        Email Us At{" "}
+        <a href="mailto: info@maumeesummerfair.com">
+          info@maumeesummerfair.com
+        </a>{" "}
+        To See If Spots Are Available.
+      </Alert>
     </Section>
     <Section modifiers="light">
       <h2>Registration Forms</h2>
