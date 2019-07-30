@@ -160,7 +160,7 @@ const MusicPage = () => (
             <tr>
               <td>
                 <span className="name">Reaganomics</span>
-                8:30pm - MIDNIGHT
+                8:00pm - MIDNIGHT
               </td>
             </tr>
           </MusicTable>
@@ -443,7 +443,7 @@ const MusicPage = () => (
         </div>
         <SpikeSectionBox>
           <h2>Reaganomics</h2>
-          <h4>Saturday 8:30pm - MIDNIGHT</h4>
+          <h4>Saturday 8:00pm - MIDNIGHT</h4>
           <p>
             If rock music of the seventies was a statement of excess and
             overproduction, eighties rock only furthered those excesses. The
