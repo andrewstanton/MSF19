@@ -4,10 +4,10 @@ import styled from "styled-components"
 import Layout from "../components/layouts/Layout"
 
 import { InnerBanner, Section } from "../components/elements"
-import { SEO, AlignCenter, AlignRight, Color } from "../components/utilities"
+import { SEO, Color, AlignRight } from "../components/utilities"
 
 import banner from "../images/banners/fair.png"
-import map from "../images/msf-map.jpg"
+import map from "../images/summer-fair-map-2019.jpg"
 
 const StyledMap = styled.div`
   text-align: center;
@@ -15,8 +15,7 @@ const StyledMap = styled.div`
 
   img {
     max-width: 100%;
-    border: 10px solid ${Color.white};
-    border-radius: 20%;
+    border: 5px solid ${Color.white};
   }
 `
 
@@ -28,18 +27,12 @@ const FairGuidePage = () => (
     </InnerBanner>
     <Section modifiers="light">
       <h2>MSF 2019 Map</h2>
-      <AlignCenter>
-        <a
-          href="https://maumeesummerfair.com/pdfs/2019-map.pdf"
-          target="_blank"
-          rel="noopener nofollow"
-        >
-          Link To Detailed Map
-        </a>
-      </AlignCenter>
-      <StyledMap>
-        <img src={map} alt="Maumee Summer Fair 2019 Map" />
-      </StyledMap>
+      <a href="https://maumeesummerfair.com/pdfs/2019-map.pdf" target="_blank">
+        <div>Click To Enlarge The Map</div>
+        <StyledMap>
+          <img src={map} alt="Maumee Summer Fair 2019 Map" />
+        </StyledMap>
+      </a>
     </Section>
     <Section>
       <h2>List Of This Year's Events</h2>
