@@ -74,7 +74,11 @@ const Layout = ({ children }) => (
       <div>
         <GlobalStyles />
         <Header siteMetadata={data.site.siteMetadata} />
-        <Body>{children}</Body>
+        <Body>
+          {typeof children === "function"
+            ? children({ siteMetadata: data.site.siteMetadata })
+            : children}
+        </Body>
         <Footer
           siteMetadata={data.site.siteMetadata}
           sponsors={data.allSponsorsJson}
