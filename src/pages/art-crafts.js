@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layouts/Layout"
 
-import { InnerBanner, Section } from "../components/elements"
+import { InnerBanner, Section, CraftVendorTable } from "../components/elements"
 import { SEO } from "../components/utilities"
 
 import banner from "../images/banners/fair.png"
@@ -14,7 +14,8 @@ const ArtCraftPage = () => (
       <h2>Local Crafts Vendor</h2>
     </InnerBanner>
     <Section>
-      <h2>More To Come!</h2>
+      <h2>This Year's Vendors:</h2>
+      <CraftVendorTable />
     </Section>
   </Layout>
 )

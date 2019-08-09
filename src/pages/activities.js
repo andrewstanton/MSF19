@@ -49,7 +49,7 @@ const ActivitiesLayout = () => {
             <br />
             Dash Plaques first 100 cars.
             <br />
-            Enter Off West Wayne / Cass Street
+            Enter Off Broadway and Gibbs
             <br />
             <br />
             <ButtonHTMLLink
