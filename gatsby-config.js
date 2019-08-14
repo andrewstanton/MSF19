@@ -4,11 +4,11 @@ module.exports = {
     description: `The Annual Maumee Summer Fair Is Held Each August On Beautifully Tree-lined Streets In The Historic Uptown District Of Maumee, Ohio`,
     dates: {
       start: {
-        date: "08/09/2019",
+        date: "08/07/2020",
         time: "5pm - 12am",
       },
       end: {
-        date: "08/10/2019",
+        date: "08/08/2020",
         time: "9am - 12am",
       },
     },
