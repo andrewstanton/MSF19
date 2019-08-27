@@ -21,14 +21,14 @@ import car3 from "../../../images/svg/car-red.svg"
 export const HomeBanner = ({ children, ...props }) => (
   <StyledHomeBanner {...props} className="homebanner">
     <HomeOverlay className="homebanner_overlay">
-      <div className="overlay_text">
+      {/* <div className="overlay_text">
         <h3>
           It's That Time Again!
           <br />
           Northwest Ohio's best fair
         </h3>
-        <h1>August 7th - 8th</h1>
-      </div>
+        <h1>August 9th - 10th</h1>
+      </div> */}
       <div className="overlay_buttons">
         <BannerButton
           modifiers={["white", "colorBlue", "hoverBlue", "large"]}

@@ -33,7 +33,7 @@ export const StyledHomeBanner = styled(Banner)`
   background-size: 400% 400%;
   transition: all 0.2 ease;
   overflow: hidden;
-  height: 800px;
+  height: 625px;
   position: relative;
   transform-style: perserve-3d;
   perspective: 1px;
@@ -50,7 +50,7 @@ export const StyledHomeBanner = styled(Banner)`
 
 export const HomeOverlay = styled.div`
   position: absolute;
-  top: 80px;
+  top: 0px;
   text-align: center;
   color: ${Color.white};
   width: 80%;

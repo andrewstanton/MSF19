@@ -70,8 +70,8 @@ const Header = ({ siteMetadata = {} }) => {
   const { dates, title, nav, social } = siteMetadata
   const { start, end } = dates
 
-  const startDate = moment(start.date, "MM/DD/YYYY").format("MMMM Do"),
-    endDate = moment(end.date, "MM/DD/YYYY").format("MMMM Do")
+  const startDate = moment(start.date, "MM/DD/YYYY").format("MMMM Do, YYYY"),
+    endDate = moment(end.date, "MM/DD/YYYY").format("MMMM Do, YYYY")
 
   return (
     <>

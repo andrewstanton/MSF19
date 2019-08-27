@@ -49,10 +49,14 @@ const ActivitiesLayout = () => {
             <br />
             Dash Plaques first 100 cars.
             <br />
-            Enter Off West Wayne / Cass Street
+            Enter Off Broadway and Gibbs
             <br />
             <br />
-            <ButtonHTMLLink modifiers="borderOrange">
+            <ButtonHTMLLink
+              modifiers="borderOrange"
+              href="https://maumeesummerfair.com/pdfs/2019-car-show.pdf"
+              target="_blank"
+            >
               Car Show Application Here
             </ButtonHTMLLink>
           </p>
@@ -171,7 +175,11 @@ const ActivitiesLayout = () => {
             Fair parade participate form
           </p>
           <br />
-          <ButtonHTMLLink modifiers="borderBlue">
+          <ButtonHTMLLink
+            modifiers="borderBlue"
+            target="_blank"
+            href="https://maumeesummerfair.com/pdfs/2019-parade.pdf"
+          >
             Parade Participant Form
           </ButtonHTMLLink>
         </SpikeSectionBox>

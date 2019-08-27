@@ -20,51 +20,9 @@ import {
   SpikeSectionBox,
   ButtonHTMLLink,
 } from "../components/elements"
-import { Color, Type, Flex, Col, SEO } from "../components/utilities"
+import { Color, Type, Flex, Col, SEO, Table } from "../components/utilities"
 
 import banner from "../images/banners/music.jpg"
-
-const MusicTable = styled.table`
-  margin-top: 2rem;
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid ${lighten("0.5", Color.grey)};
-  border-bottom: none;
-
-  tr {
-    margin: 0;
-    &:nth-child(even) {
-      td {
-        background-color: ${darken("0.05", Color.white)};
-      }
-    }
-  }
-
-  th {
-    padding: 1rem;
-    font-size: 1.5rem;
-    font-family: ${Type.header};
-    background-color: ${Color.blue};
-    color: ${Color.white};
-  }
-
-  td {
-    margin: 0;
-    padding: 1.4rem;
-    border-bottom: ${lighten("0.5", Color.grey)} 1px solid;
-    box-sizing: border-box;
-    font-size: 1rem;
-    font-style: italic;
-
-    .name {
-      font-family: ${Type.header};
-      font-size: 1.2rem;
-      display: block;
-      font-style: normal;
-      color: ${Color.blue};
-    }
-  }
-`
 
 const PaddingCol = styled(Col)`
   padding: 0 1.5rem;
@@ -85,7 +43,7 @@ const MusicPage = () => (
             bands/artists from the Northwest Ohio area to play their very own
             music. Open and free to all to enjoy during the day on Saturday!
           </p>
-          <MusicTable>
+          <Table>
             <tr>
               <td>
                 <span className="name">The Cinnamon, Larry Ensemble</span>
@@ -122,7 +80,7 @@ const MusicPage = () => (
                 3:15pm - 4:00pm
               </td>
             </tr>
-          </MusicTable>
+          </Table>
         </PaddingCol>
         <PaddingCol>
           <h2>Parking Lot Party</h2>
@@ -132,7 +90,7 @@ const MusicPage = () => (
             while a few beers! Hope to see you at the party either on Friday or
             Saturday!
           </p>
-          <MusicTable>
+          <Table>
             <tr>
               <th>Friday</th>
             </tr>
@@ -160,10 +118,10 @@ const MusicPage = () => (
             <tr>
               <td>
                 <span className="name">Reaganomics</span>
-                8:30pm - MIDNIGHT
+                8:00pm - MIDNIGHT
               </td>
             </tr>
-          </MusicTable>
+          </Table>
         </PaddingCol>
       </Flex>
     </Section>
@@ -443,7 +401,7 @@ const MusicPage = () => (
         </div>
         <SpikeSectionBox>
           <h2>Reaganomics</h2>
-          <h4>Saturday 8:30pm - MIDNIGHT</h4>
+          <h4>Saturday 8:00pm - MIDNIGHT</h4>
           <p>
             If rock music of the seventies was a statement of excess and
             overproduction, eighties rock only furthered those excesses. The

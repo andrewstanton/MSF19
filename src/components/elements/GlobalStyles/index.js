@@ -484,7 +484,7 @@ export const GlobalStyles = createGlobalStyle`
           }
         
           .overlay_buttons {
-            margin-top: 4rem;
+            margin-top: 1rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap: 10px;
