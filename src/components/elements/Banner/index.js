@@ -27,7 +27,7 @@ export const HomeBanner = ({ children, ...props }) => (
           <br />
           Northwest Ohio's best fair
         </h3>
-        <h1>August 9th - 10th</h1>
+        <h1>August 7th - 8th</h1>
       </div>
       <div className="overlay_buttons">
         <BannerButton
