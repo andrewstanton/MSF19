@@ -12,7 +12,7 @@ import banner from "../images/banners/fair.png"
 
 const LinkGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
   margin-top: 2rem;
 
