@@ -56,15 +56,7 @@ const InfoRegistrationPage = () => (
         <br />
         Emergency contact only: <strong>Mike Dibling</strong> 419-345-4500
       </p>
-      <Alert>
-        UPDATE: Vendor Booth Applications From 07/26 Are Based On Availability.
-        <br />
-        Email Us At{" "}
-        <a href="mailto: info@maumeesummerfair.com">
-          info@maumeesummerfair.com
-        </a>{" "}
-        To See If Spots Are Available.
-      </Alert>
+      <Alert>Online Applications Coming January</Alert>
     </Section>
     <Section modifiers="light">
       <h2>Registration Forms</h2>
